@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NB Gardens</title>
+        
+        <link rel="stylesheet" href="W3-Styles.css">
+        <link rel="stylesheet" href="Styles.css">
+        <link rel="icon" href="Images/favicon-32x32%20(2)%20-%20Copy.png">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!------------ Sidenav Bar -------------------->
+        <nav class="w3-sidenav w3-white w3-card-4" id="sidenav">
+            <i class="fa fa-remove w3-closenav w3-xxlarge" id="closeIcon"></i>
+            <ul id="menuList">
+                <a href="Home.html"><h2>Home</h2></a>
+                <a href="Latest.html"><h2>Latest News</h2></a>
+                <a href="Contact.html"><h2>Contact Us</h2></a>
+            </ul>
+        </nav>
+
+        <!------------ Header -------------------->
+        <header>
+            <i id="menuIcon" class="fa fa-bars w3-xlarge w3-opennav"></i>
+            <div class="head">
+                <h1 id="title">NB GARDENS</h1>
+                <h3 id="subtitle">Catalogue</h3>
+            </div>
+        </header>
+        
+        <!------------ Page Content -------------------->
+        
+        <div class="w3-container">
+            
+            <button id="filterAccordion" class="accordion w3-card-2"><h4 id="filterTitle">Filter Results</h4></button>
+            <div class="panel w3-card-2">
+                <form>
+                    <h4>Sort results by</h4>
+                    <ul id="sortByList">
+                        <li id="nameAZ" class="selected">Name A-Z</li>
+                        <li id="nameZA">Name Z-A</li>
+                        <li id="priceHigh">Price highest</li>
+                        <li id="priceLow">Price lowest</li>
+                    </ul>
+                    <br><br>
+                    <h4>Products per page</h4>
+                    <ul id="numPerList">
+                        <li id="12" class="selected">12</li>
+                        <li id="24">24</li>
+                        <li id="36">36</li>
+                        <li id="48">48</li>
+                    </ul>
+                    <br><br>                    
+                </form>
+            </div>
+            
+            <div id="productGrid">
+                <div class="w3-row-padding w3-center w3-margin-top">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-center w3-margin-top">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-center w3-margin-top">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top">
+                            <img id="productImage" src="Images/Zombies.jpg">
+                            <h4>Zombie Gnomes</h4>
+                            <h5>£12,500</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="pageNav">
+                    <ul class="pagination">
+                        <li><a href="Catalogue2.html">&laquo;</a></li>
+                        <li><a href="Catalogue.html">1</a></li>
+                        <li><a href="Catalogue2.html">2</a></li>
+                        <li><a class="chosen" href="#">3</a></li>
+                        <li><a href="Catalogue4.html">4</a></li>
+                        <li><a href="Catalogue5.html">5</a></li>
+                        <li><a href="Catalogue6.html">6</a></li>
+                        <li><a href="Catalogue4.html">&raquo;</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </body>
+    <script src="Scripts.js"></script>
+</html>
