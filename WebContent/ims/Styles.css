@@ -57,7 +57,6 @@
 /*--------------------Whole Document----------------------*/
 body {
     font-family: "Trebuchet MS", sans-serif;
-    background: rgba(41, 126, 0, 0.7);
 }
 
 .w3-container {
@@ -128,6 +127,10 @@ header {
 #banner{
   width: auto;
   height: auto;
+}
+
+footer {
+	text-align:center;
 }
 /*--------------------Home Page----------------------*/
 
@@ -357,4 +360,10 @@ ul.pagination li a.chosen {
 }
 #RiotButton{
   text-align: center;
+}
+
+#riot a:link, a:hover, a:active, a:visited {
+	color: #000; !important
+	text-decoration: none; !important
+	
 }

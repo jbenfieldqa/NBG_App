@@ -19,23 +19,23 @@
 			<!--Sidenav Bar-->
         <nav class="w3-sidenav w3-white w3-card-4" id="sidenav">
             <i class="fa fa-remove w3-closenav w3-xxlarge" id="closeIcon"></i>
-            <ul id="menuList">
-                <a href="Catalogue.html">
-                	<h2>Catalogue</h2>
-                </a>
-                <a href="About.html">
-                	<h2>About</h2>
-                </a>
-                <a href="Latest.html">
-                	<h2>Latest News</h2>
-                </a>
-                <a href="Account.html">
-                	<h2>Account</h2>
-                </a>
-                <a href="Contact.html">
-                	<h2>Contact Us</h2>
-                </a>
-            </ul>
+           <ul id="menuList">
+              <a class="w3-hover-green" href="Sales.xhtml">
+              	<h2>Sales</h2>
+              </a>
+              <a class="w3-hover-green" href="Stock.xhtml">
+              	<h2>Stock</h2>
+              </a>
+              <a class="w3-hover-green" href="Supplier.xhtml">
+              	<h2>Suppliers</h2>
+              </a>
+              <a class="w3-hover-green" href="Dispatch.xhtml">
+              	<h2>Dispatch</h2>
+              </a>
+              <a class="w3-hover-green" href="Items.xhtml">
+              	<h2>Items</h2>
+              </a>
+          </ul>
         </nav>
 
         <!--Header-->
@@ -46,19 +46,28 @@
             </div>
             <div class="head">
                 <h1 id="title">NB GARDENS</h1>
-                <a href="Catalogue.html">
-                	<h3 id="subtitle" class="hvr-underline-from-center hvr-grow">Beautiful Garden Gnomes</h3>
+                <a href="Overview.xhtml">
+                	<h3 id="subtitle" class="hvr-underline-from-center hvr-grow">IMS</h3>
                 </a>
             </div>
         </header>
 			<form class="navbar-form navbar-left">
 				<h:inputText class="form-control" value="#{search.term}" onchange="#{search.search()}" />
 			</form>
+			
+  				<ui:insert name="maincontent" />
+  					<hr />
+				<footer>
+				<p>
+					<span id="riot">
+						<a href="begin-riot.xhtml">© 2016 QA Consulting.</a>
+					</span>
+				</p>
+			  </footer>
+
 		</body>
 	</f:view>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="Scripts.js"></script>
- 
-       
+	<script src="Scripts.js"></script>   
 </html>
