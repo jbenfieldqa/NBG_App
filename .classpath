@@ -8,7 +8,11 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 8.0 Runtime">
 		<attributes>
+<<<<<<< HEAD
 			<attribute name="owner.project.facets" value="jst.web"/>
+=======
+			<attribute name="owner.project.facets" value="jst.jsf;jst.web"/>
+>>>>>>> 76012d66c0d454a1308361585c2129f3619565cb
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>

@@ -57,7 +57,7 @@
 /*--------------------Whole Document----------------------*/
 body {
     font-family: "Trebuchet MS", sans-serif;
-    background: rgba(41, 126, 0, 0.7);
+    /*background: rgba(41, 126, 0, 0.7);*/
 }
 
 .w3-container {
