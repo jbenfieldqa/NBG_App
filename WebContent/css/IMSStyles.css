@@ -82,6 +82,7 @@ header {
 }
 
 #loginSignUp {
+	color: white;
     text-align: right;
     position: relative;
     top: -10px;
@@ -89,6 +90,10 @@ header {
     margin-right: 25px;
     cursor: pointer;
     display: inline;
+}
+
+#loginSignUp a {
+	color: white;
 }
 
 #closeIcon {
