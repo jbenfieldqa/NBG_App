@@ -368,7 +368,13 @@ ul.pagination li a.chosen {
 }
 
 #riot a:link, a:hover, a:active, a:visited {
-	color: #000; !important
-	text-decoration: none; !important
+	color: #000; 
+	text-decoration: none; 
 	
+}
+
+/*-------Login Page--------*/
+.loginCard {
+	min-height: 200px;
+	float: center;
 }
