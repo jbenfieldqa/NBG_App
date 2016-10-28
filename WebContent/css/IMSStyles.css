@@ -129,6 +129,10 @@ header {
     color: white;
 }
 
+#subtitle a {
+	color: white;
+}
+
 #banner{
   width: auto;
   height: auto;
@@ -373,8 +377,3 @@ ul.pagination li a.chosen {
 	
 }
 
-/*-------Login Page--------*/
-.loginCard {
-	min-height: 200px;
-	float: center;
-}
