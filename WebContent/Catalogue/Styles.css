@@ -89,6 +89,11 @@ header {
     margin-right: 25px;
     cursor: pointer;
     display: inline;
+    color: white;
+}
+
+.login {
+	color: white;
 }
 
 #closeIcon {
@@ -122,10 +127,6 @@ header {
 #subtitle {
     font-size: 200%;
     color: white;
-}
-
-a, a:hover, a:visited, a:link, a:active {
-    color: black;
 }
 
 footer {
@@ -430,6 +431,34 @@ ul.pagination li a.chosen {
 
 .submit {
     width: 30%;
+}
+
+/*-------------------------Basket Page-------------------------*/
+
+.basketCard {
+    padding: 15px 5px 15px 5px;
+    background: rgba(111, 212, 62, 0.2);
+    margin: 20px;
+}
+
+.checkoutCard {
+    padding: 15px 20px 35px 20px;
+    background: rgba(111, 212, 62, 0.2);
+    margin: 20px;
+}
+
+.basketProductImage {
+    width: 100%;
+    height: auto;
+}
+
+.basketItemBtn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.priceCol {
+    text-align: right;
 }
 
 /*-------------------------Item Page-------------------------*/
