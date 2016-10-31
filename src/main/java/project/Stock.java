@@ -1,4 +1,4 @@
-package javaEE.project;
+package main.java.project;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

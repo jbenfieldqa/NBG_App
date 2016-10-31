@@ -36,6 +36,31 @@
       chart.render();
 }
 </script>
+     <!-- <script type="text/javascript">
+      window.onload = function () {
+      var chart2 = new CanvasJS.Chart("chartPredictContainer",
+      {
+      	animationEnabled: true,
+      	title:{
+      		text: "Gnomes predicted to be sold on the DD/MM/YYYY"
+      	},
+      	data: [
+      	{
+      		type: "column", //change type to bar, line, area, pie, etc
+      		dataPoints: [
+      			{ label: "Blue Gnome", y: 454 },
+      			{ label: "Red Gnome", y: 453 },
+      			{ label: "Green Gnome",  y: 320 },
+      			{ label: "Zombie Gnome",  y: 710 },
+      			{ label: "Santa Gnome",  y: 100 }
+      		]
+      	}
+      	]
+      	});
+
+      chart.render();
+}
+</script>-->
 <script type="text/javascript" src="graphJS/jquery.canvasjs.min.js"></script>
 
     </head>
@@ -65,7 +90,7 @@
     </header>
     <!---banner--->
     <div id = "banner" width = 100% class ="w3-container w3-green">
-      <h5> Welcome to the NB Gradens IMS</h5>
+      <h5> Welcome to the NB Gardens IMS</h5>
     </div>
     <!--Page content -->
     <div class = "w3-container">
@@ -81,8 +106,9 @@
           </div>
           <div class= "w3-half">
             <div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
-              <h4 id = "displayCardTitle">Stock</h4>
+              <h4 id = "displayCardTitle">Predicted Stock</h4>
               <h4>Stock info</h4>
+              <div id = "chartPredictContainer" style = " height: 75%; width: 100%"></div>
             </div>
           </div>
         </div>

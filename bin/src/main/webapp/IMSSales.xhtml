@@ -5,7 +5,98 @@ xmlns:ui="http://java.sun.com/jsf/facelets"
 template="IMSTemplate.xhtml">
   <meta charset="utf-8" />
   <ui:define name="title">Sales</ui:define>
- 	<ui:define name="maincontent">
-		<p>Salesy Stuff</p>	  
+ 	<ui:define name="maincontent">	  
+	<link rel="stylesheet" media="screen" href="css/tabs.css" type="text/css" />
+<!-- Beginning of Page Content -->
+
+		<!--banner-->
+		<div id = "banner" class ="w3-container w3-green">
+		  <h5> Salesy Stuff</h5>
+		</div>
+		
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Daily')" id="defaultOpen">Daily</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Weekly')">Weekly</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Monthly')">Month</a></li>
+</ul>
+
+<div id="Daily" class="tabcontent" style="height: 500px; width: 600px;">
+  <h3>Daily Sales</h3>
+  <p>Insert graph information.</p>
+  <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</div>
+
+<div id="Weekly" class="tabcontent">
+  <h3>Weekly Sales</h3>
+  <p>Insert graph information.</p>
+  <div id="chartContainerWeekly" style="height: 400px; width: 600px;"></div>
+</div>
+
+<div id="Monthly" class="tabcontent">
+  <h3>Monthly Sales</h3>
+  <p>Insert graph information.</p>
+
+</div>
+	
+	<!-- Page Scripts -->
+<!-- Click on the <span> element to close the tab -->
+<script type= "text/javascript" src ="java/tab.js"></script>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script type="text/javascript">
+			  window.onload = function () {
+			  var chart = new CanvasJS.Chart("chartContainer",
+			  {
+				animationEnabled: true,
+				title:{
+					text: "Gnomes Sold on the DD/MM/YYYY"
+				},
+				data: [
+				{
+					type: "column", //change type to bar, line, area, pie, etc
+					dataPoints: [
+						{ label: "Blue Gnome", y: 450 },
+						{ label: "Red Gnome", y: 488 },
+						{ label: "Green Gnome",  y: 351 },
+						{ label: "Zombie Gnome",  y: 658 },
+						{ label: "Santa Gnome",  y: 80 }
+					]
+				}
+				]
+				});
+
+			  chart.render();
+			  chart={};
+			  
+  			  var chartWeekly = new CanvasJS.Chart("chartContainerWeekly",
+			  {
+				animationEnabled: true,
+				title:{
+					text: "Gnomes Sold on in MM"
+				},
+				data: [
+				{
+					type: "column", //change type to bar, line, area, pie, etc
+					dataPoints: [
+						{ label: "Blue Gnome", y: 450 },
+						{ label: "Red Gnome", y: 488 },
+						{ label: "Green Gnome",  y: 351 },
+						{ label: "Zombie Gnome",  y: 400 },
+						{ label: "Santa Gnome",  y: 80 }
+					]
+				}
+				]
+				});
+
+			  chartWeekly.render();
+			  chartWeekly={};
+			}			  
+	  </script>
+<!--End of Page Content -->
+
+<script type="text/javascript" src="graphJS/jquery.canvasjs.min.js"></script>
 	</ui:define> 
 </ui:composition>

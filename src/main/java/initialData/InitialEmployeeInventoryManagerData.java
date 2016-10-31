@@ -1,8 +1,8 @@
-package javaEE.initialData;
+package main.java.initialData;
 
 import java.util.ArrayList;
 import java.util.List;
-import javaEE.project.EmployeeInventoryManager;
+import main.java.project.EmployeeInventoryManager;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;

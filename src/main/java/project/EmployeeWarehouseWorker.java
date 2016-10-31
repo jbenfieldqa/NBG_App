@@ -1,4 +1,4 @@
-package javaEE.project;
+package main.java.project;
 
 //Imports
 import javax.persistence.*;

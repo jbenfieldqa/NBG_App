@@ -1,8 +1,8 @@
-package javaEE.project;
+package main.java.project;
 
 //Imports
 import java.util.*;
-import javaEE.enums.CustomerOrderStatus;
+import main.java.enums.CustomerOrderStatus;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

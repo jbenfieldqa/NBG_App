@@ -1,9 +1,9 @@
-package javaEE.initialData;
+package main.java.initialData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javaEE.project.Supplier;
+import main.java.project.Supplier;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
