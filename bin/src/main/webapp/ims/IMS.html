@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>NB Gardens IMS</title>
+
+      <link rel="stylesheet" href="W3-Styles.css">
+      <link rel="stylesheet" href="Styles.css">
+      <link rel="icon" href="Images/favicon-32x32%20(2)%20-%20Copy.png">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript">
+      window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer",
+      {
+      	animationEnabled: true,
+      	title:{
+      		text: "Gnomes Sold on the DD/MM/YYYY"
+      	},
+      	data: [
+      	{
+      		type: "column", //change type to bar, line, area, pie, etc
+      		dataPoints: [
+      			{ label: "Blue Gnome", y: 450 },
+      			{ label: "Red Gnome", y: 488 },
+      			{ label: "Green Gnome",  y: 351 },
+      			{ label: "Zombie Gnome",  y: 658 },
+      			{ label: "Santa Gnome",  y: 80 }
+      		]
+      	}
+      	]
+      	});
+
+      chart.render();
+}
+</script>
+<script type="text/javascript" src="graphJS/jquery.canvasjs.min.js"></script>
+
+    </head>
+    <body>
+      <!------------ Sidenav Bar -------------------->
+      <nav class="w3-sidenav w3-border w3-white w3-card-4" id="sidenav">
+          <i class="fa fa-remove w3-closenav w3-xxlarge " id="closeIcon"></i>
+          <ul id="menuList">
+              <a class="w3-hover-green" href="Sales.html"><h2>Sales</h2></a>
+              <a class="w3-hover-green" href="Stock.html"><h2>Stock</h2></a>
+              <a class="w3-hover-green" href="Supplier.html"><h2>Suppliers</h2></a>
+              <a class="w3-hover-green" href="Dispatch.html"><h2>Dispatch</h2></a>
+              <a class="w3-hover-green" href="Items.html"><h2>Items</h2></a>
+          </ul>
+      </nav>
+    </body>
+    <!------------ Header -------------------->
+    <header>
+        <div class="row">
+            <i id="menuIcon" class="fa fa-bars w3-xlarge hvr-grow w3-green"></i>
+            <h3 id="loginSignUp" class="hvr-underline-from-center hvr-grow">Login / Sign up</h3>
+        </div>
+        <div class="head">
+            <a href="IMS.html"><h1 id="title" class="hvr-underline-from-center hvr-grow">NB GARDENS</h1></a>
+            <h3 id="subtitle">IMS</h3>
+        </div>
+    </header>
+    <!---banner--->
+    <div id = "banner" width = 100% class ="w3-container w3-green">
+      <h5> Welcome to the NB Gradens IMS</h5>
+    </div>
+    <!--Page content -->
+    <div class = "w3-container">
+      <div id = "displayStats">
+        <div class = "w3-row-padding w3-center">
+          <div class= "w3-half">
+            <div id = "displayCard"class = "w3-card-2 w3-padding-top productCard hvr-grow" onclick="location.href='Stock.html'">
+              <!---sales graphs--->
+              <h4 id = "displayCardTitle" align="center">Stock</h4>
+              <h4>Stock info</h4>
+              <div id="chartContainer" style="height: 75%; width: 100%;"></div>
+            </div>
+          </div>
+          <div class= "w3-half">
+            <div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+              <h4 id = "displayCardTitle">Stock</h4>
+              <h4>Stock info</h4>
+            </div>
+          </div>
+        </div>
+        <div class = "w3-row-padding w3-center">
+          <div class= "w3-half">
+            <div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+              <h4>Current Orders</h4>
+              <h4>Orders info</h4>
+            </div>
+          </div>
+          <div class= "w3-half">
+            <div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+              <h4>Outgoing Order</h4>
+              <h4>Order info</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id = "RiotButton">
+        <button class = "w3-btn w3-round-xlarge w3-display-bottomright" onclick ="location.href='Riot.html'">Begin Riot</button>
+
+      </div>
+    </footer>
+  <script src = "Scripts.js "></script>
+  <script type="text/javascript" src ="graphJS/canvasjs.">
+
+  </script>
+</html>

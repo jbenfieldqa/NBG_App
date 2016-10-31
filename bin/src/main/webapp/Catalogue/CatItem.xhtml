@@ -1,0 +1,74 @@
+<ui:composition 
+	xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="CatTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="NB Gardens">About</ui:define>
+	<ui:define name="maincontent">
+
+		<!-- Page content -->
+		<div class="w3-container">
+			<div id="product-display" class="w3-row-padding w3-card-2 w3-center w3-margin-top">
+				<div class="w3-half">
+					<img id="productImage" src="Images/Zombies.jpg" />
+				</div>
+				<div class="w3-half">
+					<h3>Zombie Gnomes</h3>
+					<h4>Price: £12,500</h4>
+					<p> 
+						Crawling through the garden<br></br>
+						Hunting for some flesh<br></br>
+						This poor gnome's legs are gone<br></br>
+						He's really quite a mess..<br></br>
+						Searching for his prey<br></br>
+						And spreading viral death<br></br>
+						Always on the lookout<br></br>
+						For another to infect!<br></br>
+						Won't you be his victim?<br></br>
+						Infected like the rest<br></br>
+						Put him in your garden<br></br>
+						You can be his next!<br></br><br></br>
+						Dimensions: 23cm (9 inches) x 15cm (6 inches) x 23cm (9 inches)
+					</p>
+					<form>
+						Quantity: <input type="text" /><br></br>
+						Porousware: <input type="checkbox" /><br></br>
+						<input type="submit" />
+					</form>				
+				</div>
+			</div>
+		</div>
+		
+		<div class="w3-container">
+				<div id="similar-products" class="w3-card-2">
+				<h3>Customers Who Bought This Also Bought...</h3>
+				</div>
+				<div class="w3-row-padding w3-center w3-margin-top">
+					<div class="w3-third">
+						<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+						</div>
+					</div>	
+					<div class="w3-third">
+						<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+						</div>
+					</div>	
+					<div class="w3-third">
+						<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+						</div>
+					</div>	
+				</div>
+			</div>
+	  		
+	</ui:define> 
+</ui:composition>
