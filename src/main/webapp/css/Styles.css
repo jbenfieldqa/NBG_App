@@ -75,7 +75,7 @@ body {
 }
 
 header {
-    background-image: url(Images/GnomeBanner.png);
+    background-image: url(/Images/GnomeBanner.png);
     color: white;
     height: 225px;
 }
