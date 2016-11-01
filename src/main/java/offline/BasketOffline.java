@@ -1,10 +1,10 @@
-package javaEE.offline;
+package main.java.offline;
 
 import java.util.List;
 
-import javaEE.initialData.InitialBasketData;
-import javaEE.managers.BasketManager;
-import javaEE.project.Basket;
+import main.java.initialData.InitialBasketData;
+import main.java.managers.BasketManager;
+import main.java.project.Basket;
 
 import javax.inject.*;
 
@@ -15,15 +15,13 @@ public class BasketOffline implements BasketManager{
 	public void persistBasket(Basket a) {
 		initialData.addBasket(a);
 	}
-
 	
 	public void updateBasket(Basket b) {
 		List<Basket> bs = initialData.getBaskets();
 		for(int i=0; i<bs.size(); i++) {
 			if(bs.get(i).equals(b))bs.set(i, b);
-		}
+		}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 		initialData.setBaskets(bs);
-		
 	}
 
 	public void removeItem(Basket b) {
@@ -32,7 +30,6 @@ public class BasketOffline implements BasketManager{
 			if(bs.get(i).equals(b))bs.remove(i);
 		}
 		initialData.setBaskets(bs);
-		
 	}
 
 }

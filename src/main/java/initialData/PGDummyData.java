@@ -1,6 +1,6 @@
-package javaEE.initialData;
+package main.java.initialData;
 import java.util.*; 
-import javaEE.project.ProductGroup;
+import main.java.project.ProductGroup;
 
 public class PGDummyData {
 

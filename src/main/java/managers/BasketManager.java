@@ -1,6 +1,6 @@
-package javaEE.managers;
+package main.java.managers;
 
-import javaEE.project.Basket;
+import main.java.project.Basket;
 
 
 public interface BasketManager {

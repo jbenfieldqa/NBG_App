@@ -1,8 +1,8 @@
-package javaEE.initialData;
+package main.java.initialData;
 import java.util.*;
 
-import javaEE.enums.Status;
-import javaEE.project.ProductItem;
+import main.java.enums.Status;
+import main.java.project.ProductItem;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;

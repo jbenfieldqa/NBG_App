@@ -1,20 +1,11 @@
-package javaEE.initialData;
+package main.java.initialData;
 
 import java.util.*;
 
 
-import javaEE.enums.CustomerOrderStatus;
-import javaEE.enums.Status;
-import javaEE.project.EmployeeInventoryManager;
-import javaEE.project.Basket;
-import javaEE.project.Customer;
-import javaEE.project.CustomerOrder;
-import javaEE.project.ProductGroup;
-import javaEE.project.ProductItem;
-import javaEE.project.PurchaseOrder;
-import javaEE.project.Stock;
-import javaEE.project.Supplier;
-import javaEE.project.Wishlist;
+import main.java.enums.CustomerOrderStatus;
+import main.java.enums.Status;
+import main.java.project.*;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;

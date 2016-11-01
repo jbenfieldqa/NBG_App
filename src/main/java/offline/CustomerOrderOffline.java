@@ -1,15 +1,15 @@
-package javaEE.offline;
+package main.java.offline;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javaEE.initialData.InitialCustomerOrderData;
-import javaEE.managers.CustomerOrderManager;
-import javaEE.project.CustomerOrder;
+import main.java.initialData.InitialCustomerOrderData;
+import main.java.managers.CustomerOrderManager;
+import main.java.project.CustomerOrder;
 
 import javax.inject.Inject;
 
-public class CustomerOrderOffline implements CustomerOrderManager{
+public abstract class CustomerOrderOffline implements CustomerOrderManager{
 
 	@Inject
 	private InitialCustomerOrderData initialData;

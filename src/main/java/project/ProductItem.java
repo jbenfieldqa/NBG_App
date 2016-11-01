@@ -1,6 +1,7 @@
 package project;
-import javaEE.enums.Status;
-import javaEE.project.*;
+import enums.Status;
+
+
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

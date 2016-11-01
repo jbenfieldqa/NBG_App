@@ -1,10 +1,10 @@
-package javaEE.initialData;
+package main.java.initialData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javaEE.enums.CustomerOrderStatus;
-import javaEE.project.CustomerOrder;
+import main.java.enums.CustomerOrderStatus;
+import main.java.project.CustomerOrder;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
