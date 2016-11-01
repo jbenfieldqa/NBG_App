@@ -9,7 +9,7 @@ import javax.ejb.Startup;
 
 import com.qac.nbg_app.entities.*;
 
-import enums.CustomerOrderStatus;
+import com.qac.nbg_app.enums.CustomerOrderStatus;
 
 
 @Startup

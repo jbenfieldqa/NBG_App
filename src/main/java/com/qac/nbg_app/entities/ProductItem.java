@@ -1,8 +1,9 @@
 package com.qac.nbg_app.entities;
-import enums.Status;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
+import com.qac.nbg_app.enums.Status;
 
 @Entity 
 @Table(name = "ProductItem")

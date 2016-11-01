@@ -2,10 +2,12 @@ package com.qac.nbg_app.entities;
 
 //Imports
 import java.util.*;
-import enums.CustomerOrderStatus;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
+import com.qac.nbg_app.enums.CustomerOrderStatus;
 
 @Entity
 @Table(name = "customerorder" )
