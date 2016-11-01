@@ -1,6 +1,7 @@
 package managers;
 import java.util.*;
-import project.Stock;
+
+import com.qac.nbg_app.entities.Stock;
 
 public interface StockManager {
 	

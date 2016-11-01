@@ -1,7 +1,6 @@
 package managers;
 
-import project.EmployeeInventoryManager;
-
+import com.qac.nbg_app.entities.EmployeeInventoryManager;
 
 public interface EmployeeInventoryManagerManager {
 	public void persistEmployeeInventoryManager (EmployeeInventoryManager a);

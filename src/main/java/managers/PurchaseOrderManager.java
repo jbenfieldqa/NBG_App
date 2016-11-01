@@ -1,6 +1,9 @@
 package managers;
+
 import java.util.*;
-import project.PurchaseOrder;
+
+import com.qac.nbg_app.entities.PurchaseOrder;
+
 
 public interface PurchaseOrderManager {
 	

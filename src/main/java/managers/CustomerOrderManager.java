@@ -1,7 +1,9 @@
 package managers;
 
 import java.util.*;
-import project.CustomerOrder;
+
+import com.qac.nbg_app.entities.CustomerOrder;
+
 
 public interface CustomerOrderManager {
 	

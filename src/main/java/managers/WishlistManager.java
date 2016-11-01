@@ -1,7 +1,9 @@
 package managers;
 
 import java.util.*;
-import project.Wishlist;
+
+import com.qac.nbg_app.entities.Wishlist;
+
 
 public interface WishlistManager {
 	public void persistWishlist (Wishlist w);

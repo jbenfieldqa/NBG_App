@@ -1,6 +1,9 @@
 package managers;
+
 import java.util.*;
-import project.ProductGroup;
+
+import com.qac.nbg_app.entities.ProductGroup;
+
 
 public interface PGInterface {
 	public void productGroup(ProductGroup a);	

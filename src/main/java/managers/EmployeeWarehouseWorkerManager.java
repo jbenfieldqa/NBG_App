@@ -1,7 +1,9 @@
 package managers;
 
 import java.util.*;
-import project.EmployeeWarehouseWorker;
+
+import com.qac.nbg_app.entities.EmployeeWarehouseWorker;
+
 
 public interface EmployeeWarehouseWorkerManager {
 	public void persistWarehouseWorker (EmployeeWarehouseWorker e);

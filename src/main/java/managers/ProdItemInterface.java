@@ -1,6 +1,9 @@
 package managers;
+
 import java.util.*;
-import project.ProductItem;
+
+import com.qac.nbg_app.entities.ProductItem;
+
 
 
 public interface ProdItemInterface {

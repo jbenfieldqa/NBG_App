@@ -1,7 +1,9 @@
 package managers;
 
 import java.util.*;
-import project.Supplier;
+
+import com.qac.nbg_app.entities.Supplier;
+
 
 public interface SupplierManager {
 	public void persistSupplier (Supplier s);

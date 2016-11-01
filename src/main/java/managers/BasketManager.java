@@ -1,7 +1,6 @@
 package managers;
 
-import project.Basket;
-
+import com.qac.nbg_app.entities.Basket;
 
 public interface BasketManager {
 	
@@ -10,6 +9,5 @@ public interface BasketManager {
 	public void updateBasket(Basket b);
 	
 	public void removeItem(Basket b);
-	
 
 }

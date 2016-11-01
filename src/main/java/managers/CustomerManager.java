@@ -1,7 +1,9 @@
 package managers;
 
 import java.util.*;
-import project.Customer;
+
+import com.qac.nbg_app.entities.Customer;
+
 
 public interface CustomerManager {
 	public void persistCustomer (Customer c);
