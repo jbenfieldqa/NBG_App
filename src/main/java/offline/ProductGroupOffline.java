@@ -1,11 +1,11 @@
-package javaEE.offline;
+package  offline;
 import java.util.*;
 
 import javax.inject.Inject;
 
-import javaEE.initialData.InitialProductGroupData;
-import javaEE.managers.PGInterface;
-import javaEE.project.ProductGroup;
+import initialData.InitialProductGroupData;
+import managers.PGInterface;
+import project.ProductGroup;
 
 public class ProductGroupOffline implements PGInterface{
 	@Inject

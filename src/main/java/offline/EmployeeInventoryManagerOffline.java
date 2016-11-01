@@ -1,10 +1,10 @@
-package javaEE.offline;
+package offline;
 
 import java.util.*;
 
-import javaEE.initialData.InitialEmployeeInventoryManagerData;
-import javaEE.managers.EmployeeInventoryManagerManager;
-import javaEE.project.EmployeeInventoryManager;
+import initialData.InitialEmployeeInventoryManagerData;
+import managers.EmployeeInventoryManagerManager;
+import project.EmployeeInventoryManager;
 
 import javax.inject.Inject;
 

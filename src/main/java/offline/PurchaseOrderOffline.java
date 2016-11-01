@@ -1,4 +1,4 @@
-package javaEE.offline;
+package offline;
 
 
 import java.util.ArrayList;
@@ -6,9 +6,10 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import javaEE.initialData.InitialPurchaseOrderData;
-import javaEE.managers.PurchaseOrderManager;
-import javaEE.project.PurchaseOrder;
+import initialData.InitialPurchaseOrderData;
+import managers.PurchaseOrderManager;
+import project.PurchaseOrder;
+
 public class PurchaseOrderOffline implements PurchaseOrderManager{
 	
 	@Inject

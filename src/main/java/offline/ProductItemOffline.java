@@ -1,9 +1,9 @@
-package javaEE.offline;
+package offline;
 import java.util.*;
 
-import javaEE.initialData.InitialProductItemData;
-import javaEE.managers.ProdItemInterface;
-import javaEE.project.ProductItem;
+import initialData.InitialProductItemData;
+import managers.ProdItemInterface;
+import project.ProductItem;
 
 ;
 

@@ -1,10 +1,10 @@
-package main.java.offline;
+package offline;
 
 import java.util.List;
 
-import main.java.initialData.InitialBasketData;
-import main.java.managers.BasketManager;
-import main.java.project.Basket;
+import initialData.InitialBasketData;
+import managers.BasketManager;
+import project.Basket;
 
 import javax.inject.*;
 

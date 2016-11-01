@@ -1,11 +1,11 @@
-package javaEE.offline;
+package offline;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javaEE.initialData.InitialWishlistData;
-import javaEE.managers.WishlistManager;
-import javaEE.project.Wishlist;
+import initialData.InitialWishlistData;
+import managers.WishlistManager;
+import project.Wishlist;
 
 import javax.inject.*;
 

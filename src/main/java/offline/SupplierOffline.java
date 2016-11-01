@@ -1,13 +1,14 @@
-package javaEE.offline;
+package offline;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javaEE.initialData.InitialSupplierData;
-import javaEE.managers.SupplierManager;
-import javaEE.project.Supplier;
+import initialData.InitialSupplierData;
+import managers.SupplierManager;
+import project.Supplier;
 
 import javax.inject.Inject;
+
 public class SupplierOffline implements SupplierManager {
 
 	@Inject

@@ -1,11 +1,11 @@
-package main.java.offline;
+package offline;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.initialData.InitialCustomerOrderData;
-import main.java.managers.CustomerOrderManager;
-import main.java.project.CustomerOrder;
+import initialData.InitialCustomerOrderData;
+import managers.CustomerOrderManager;
+import project.CustomerOrder;
 
 import javax.inject.Inject;
 

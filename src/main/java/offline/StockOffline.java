@@ -1,12 +1,12 @@
-package javaEE.offline;
+package offline;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import javaEE.initialData.InitialStockData;
-import javaEE.managers.StockManager;
-import javaEE.project.Stock;
+import initialData.InitialStockData;
+import managers.StockManager;
+import project.Stock;
 
 public abstract class StockOffline implements StockManager{
 
