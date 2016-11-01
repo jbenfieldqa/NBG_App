@@ -1,0 +1,77 @@
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+template="/templates/IMSTemplate.xhtml">
+  <meta charset="utf-8" />
+  <ui:define name="title">Overview</ui:define>
+  <ui:define name="maincontent">
+	
+
+		<!--banner-->
+		<div id = "banner" class ="w3-container w3-green">
+		  <h5> Welcome to the NB Gardens IMS</h5>
+		</div>
+		<!--Page content -->
+		<div class = "w3-container">
+		  <div id = "displayStats">
+			<div class = "w3-row-padding w3-center">
+			  <div class= "w3-half">
+				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow" onclick="location.href='Stock.html'">
+				  <!--sales graphs-->
+				  <h4 id = "displayCardTitle" align="center">Sales</h4>
+				  <h4>Sales info</h4>
+				  <div id="chartContainer" style="height: 75%; width: 100%;"></div>
+				</div>
+			  </div>
+			  <div class= "w3-half">
+				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+				  <h4 id = "displayCardTitle">Stock</h4>
+				  <h4>Stock info</h4>
+				</div>
+			  </div>
+			</div>
+			<div class = "w3-row-padding w3-center">
+			  <div class= "w3-half">
+				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+				  <h4>Current Orders</h4>
+				  <h4>Orders info</h4>
+				</div>
+			  </div>
+			  <div class= "w3-half">
+				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow">
+				  <h4>Outgoing Order</h4>
+				  <h4>Order info</h4>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  <script type="text/javascript">
+			  window.onload = function () {
+			  var chart = new CanvasJS.Chart("chartContainer",
+			  {
+				animationEnabled: true,
+				title:{
+					text: "Gnomes Sold on the DD/MM/YYYY"
+				},
+				data: [
+				{
+					type: "column", //change type to bar, line, area, pie, etc
+					dataPoints: [
+						{ label: "Blue Gnome", y: 450 },
+						{ label: "Red Gnome", y: 488 },
+						{ label: "Green Gnome",  y: 351 },
+						{ label: "Zombie Gnome",  y: 658 },
+						{ label: "Santa Gnome",  y: 80 }
+					]
+				}
+				]
+				});
+
+			  chart.render();
+			}
+	  </script>
+	<script type="text/javascript" src="/js/jquery.canvasjs.min.js" />
+	</ui:define> 
+</ui:composition>

@@ -65,7 +65,7 @@ body {
 }
 
 header {
-    background-image: url(Images/banner.jpg);
+    background-image: url(/Images/banner.jpg);
     color: white;
     height: 225px;
 }

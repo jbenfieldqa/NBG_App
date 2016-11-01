@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-  <context-root>NewApp</context-root>
+
+  <context-root>NBG-App</context-root>
+
 </jboss-web>

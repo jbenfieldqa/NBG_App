@@ -1,0 +1,170 @@
+<ui:composition 
+	xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="CatTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="NB Gardens">Contact</ui:define>
+	<ui:define name="maincontent">
+
+		<!--Page content -->
+		<div class="w3-container">
+            
+            <button id="filterAccordion" class="accordion w3-card-2"><h4 id="filterTitle">Filter Results</h4></button>
+            <div class="panel w3-card-2">
+                <form>
+                    <h4>Sort results by</h4>
+                    <ul id="sortByList">
+                        <li id="nameAZ" class="selected">Name A-Z</li>
+                        <li id="nameZA">Name Z-A</li>
+                        <li id="priceHigh">Price highest</li>
+                        <li id="priceLow">Price lowest</li>
+                    </ul>
+                    <br></br><br></br>
+                    <h4>Products per page</h4>
+                    <ul id="numPerList">
+                        <li id="12" class="selected">12</li>
+                        <li id="24">24</li>
+                        <li id="36">36</li>
+                        <li id="48">48</li>
+                    </ul>
+                    <br></br><br></br>             
+                </form>
+            </div>
+            
+            <div id="productGrid">
+                <div class="w3-row-padding w3-center">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-center">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-center">
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+                            <img id="productImage" src="Images/Zombies.jpg" />
+                            <h4>Zombie Gnomes</h4>
+                            <h4>£12,500</h4>
+                            <button class="addToBtn">Add to cart</button>
+                            <button class="quickLookBtn">Quick look</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="pageNav">
+                    <ul class="pagination">
+                        <li><a class="chosen" href="#">1</a></li>
+                        <li><a href="Catalogue2.html">2</a></li>
+                        <li><a href="Catalogue3.html">3</a></li>
+                        <li><a href="Catalogue4.html">4</a></li>
+                        <li><a href="Catalogue5.html">5</a></li>
+                        <li><a href="Catalogue6.html">6</a></li>
+                        <li><a href="Catalogue3.html">Next</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+	</ui:define> 
+</ui:composition>
