@@ -65,7 +65,8 @@ body {
 }
 
 header {
-    background-image: url(/Images/banner.jpg);
+    background-color: rgb(100,200,100);
+    background-image: url("Images/banner.png");
     color: white;
     height: 225px;
 }
@@ -374,11 +375,16 @@ ul.pagination li a.chosen {
 #riot a:link, a:hover, a:active, a:visited {
 	color: #000; 
 	text-decoration: none; 
-	
+}
+
+.riot-card {
+	color: rgb(255,255,255);
+	background-color: rgba(150,25,25,0.7);
 }
 /*--Sales Page--*/
 #Daily
 {
 	align-items: center;
 }
+
 
