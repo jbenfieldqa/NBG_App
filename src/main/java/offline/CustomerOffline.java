@@ -3,15 +3,18 @@ package offline;
 import java.util.ArrayList;
 import java.util.List;
 
-import initialData.*;
+
 import managers.CustomerManager;
-import project.Customer;
+
 
 import javax.inject.Inject;
 
+import com.qac.nbg_app.entities.Customer;
+import com.qac.nbg_app.util.InitialData;
+
 public abstract class CustomerOffline implements CustomerManager{
 	@Inject
-	private InitialCustomerData initialData;
+	private InitialData initialData;
 	
 	public void persistCustomer(Customer c) {
 		initialData.addCustomer(c);

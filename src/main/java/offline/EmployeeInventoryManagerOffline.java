@@ -2,16 +2,19 @@ package offline;
 
 import java.util.*;
 
-import initialData.InitialEmployeeInventoryManagerData;
+
 import managers.EmployeeInventoryManagerManager;
-import project.EmployeeInventoryManager;
+
 
 import javax.inject.Inject;
+
+import com.qac.nbg_app.entities.EmployeeInventoryManager;
+import com.qac.nbg_app.util.InitialData;
 
 public abstract class EmployeeInventoryManagerOffline implements EmployeeInventoryManagerManager{
 
 	@Inject
-	private InitialEmployeeInventoryManagerData initialData;
+	private InitialData initialData;
 	public void persistEmployeeInventoryManager(EmployeeInventoryManager im) {
 			initialData.addEmployeeInventoryManager(im);
 	}

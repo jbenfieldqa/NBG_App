@@ -3,13 +3,15 @@ import java.util.*;
 
 import javax.inject.Inject;
 
-import initialData.InitialProductGroupData;
+import com.qac.nbg_app.entities.ProductGroup;
+import com.qac.nbg_app.util.InitialData;
+
 import managers.PGInterface;
-import project.ProductGroup;
+
 
 public class ProductGroupOffline implements PGInterface{
 	@Inject
-	private InitialProductGroupData initialData;
+	private InitialData initialData;
 	
 	public void productGroup(ProductGroup a) {
 		initialData.addProductGroup(a); 

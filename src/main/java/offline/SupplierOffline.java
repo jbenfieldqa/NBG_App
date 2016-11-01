@@ -3,16 +3,19 @@ package offline;
 import java.util.ArrayList;
 import java.util.List;
 
-import initialData.InitialSupplierData;
+
 import managers.SupplierManager;
-import project.Supplier;
+
 
 import javax.inject.Inject;
+
+import com.qac.nbg_app.entities.Supplier;
+import com.qac.nbg_app.util.InitialData;
 
 public class SupplierOffline implements SupplierManager {
 
 	@Inject
-	private InitialSupplierData initialData;
+	private InitialData initialData;
 	public void persistSupplier(Supplier s) {
 		initialData.addSupplier(s);
 	}

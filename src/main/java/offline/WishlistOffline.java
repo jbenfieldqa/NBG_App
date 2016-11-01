@@ -1,18 +1,18 @@
 package offline;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import initialData.InitialWishlistData;
 import managers.WishlistManager;
-import project.Wishlist;
 
 import javax.inject.*;
+
+import com.qac.nbg_app.entities.Wishlist;
+import com.qac.nbg_app.util.InitialData;
 
 public class WishlistOffline implements WishlistManager {
 	
 	@Inject
-	private InitialWishlistData initialData;
+	private InitialData initialData;
 
 	public void persistWishlist(Wishlist w) {
 		initialData.addWishlist(w);

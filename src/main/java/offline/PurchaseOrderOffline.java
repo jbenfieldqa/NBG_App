@@ -6,14 +6,16 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import initialData.InitialPurchaseOrderData;
+import com.qac.nbg_app.entities.PurchaseOrder;
+import com.qac.nbg_app.util.InitialData;
+
 import managers.PurchaseOrderManager;
-import project.PurchaseOrder;
+
 
 public class PurchaseOrderOffline implements PurchaseOrderManager{
 	
 	@Inject
-	private InitialPurchaseOrderData initialData;
+	private InitialData initialData;
 
 	public void addPurchaseOrder(PurchaseOrder a)
 	{

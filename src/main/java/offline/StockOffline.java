@@ -4,14 +4,16 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import initialData.InitialStockData;
+import com.qac.nbg_app.entities.Stock;
+import com.qac.nbg_app.util.InitialData;
+
 import managers.StockManager;
-import project.Stock;
+
 
 public abstract class StockOffline implements StockManager{
 
 	@Inject
-	private InitialStockData initialData;
+	private InitialData initialData;
 	
 	public void persistStock(Stock a) {
 		// TODO Auto-generated method stub

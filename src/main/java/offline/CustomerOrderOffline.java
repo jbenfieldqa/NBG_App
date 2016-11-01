@@ -1,18 +1,21 @@
 package offline;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import initialData.InitialCustomerOrderData;
+
 import managers.CustomerOrderManager;
-import project.CustomerOrder;
+
 
 import javax.inject.Inject;
+
+import com.qac.nbg_app.entities.Customer;
+import com.qac.nbg_app.entities.CustomerOrder;
+import com.qac.nbg_app.util.InitialData;
 
 public abstract class CustomerOrderOffline implements CustomerOrderManager{
 
 	@Inject
-	private InitialCustomerOrderData initialData;
+	private InitialData initialData;
 	public void persistCustomerOrder(CustomerOrder o) {
 		initialData.addCustomerOrder(o);
 	}
@@ -21,7 +24,7 @@ public abstract class CustomerOrderOffline implements CustomerOrderManager{
 		return null;
 	}
 
-	public ArrayList<CustomerOrder> getCustomerName() {
+	public List<Customer> getCustomerName() {
 		return initialData.getCustomers();
 	}
 

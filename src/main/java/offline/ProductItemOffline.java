@@ -1,14 +1,16 @@
 package offline;
+
 import java.util.*;
 
-import initialData.InitialProductItemData;
-import managers.ProdItemInterface;
-import project.ProductItem;
+import com.qac.nbg_app.entities.ProductItem;
+import com.qac.nbg_app.util.InitialData;
 
-;
+import managers.ProdItemInterface;
+
+
 
 public class ProductItemOffline implements ProdItemInterface {
-	private InitialProductItemData initialData; 
+	private InitialData initialData; 
 	
 	public void productItem(ProductItem a) {
 		initialData.addProductItem(a); 
