@@ -5,4 +5,4 @@
  * @author Administrator
  *
  */
-package project;
+package com.qac.nbg_app.entities;

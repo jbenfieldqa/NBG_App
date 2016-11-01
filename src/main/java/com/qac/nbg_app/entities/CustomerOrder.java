@@ -1,8 +1,8 @@
-package project;
+package com.qac.nbg_app.entities;
 
 //Imports
 import java.util.*;
-import javaEE.enums.CustomerOrderStatus;
+import enums.CustomerOrderStatus;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

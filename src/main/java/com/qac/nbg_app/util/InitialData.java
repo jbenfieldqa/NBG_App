@@ -7,7 +7,10 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
-import com.qac.nbg_app.entities.Product;
+import com.qac.nbg_app.entities.*;
+
+import enums.CustomerOrderStatus;
+
 
 @Startup
 @Singleton 
@@ -30,7 +33,7 @@ public class InitialData {
 		setupCustomerOrderData();
 		setupInventoryManagerData();
 		setupProductGroupData();
-		setupProductGroupData();
+		setupProductItemData();
 		setupPurchaseOrderData();
 		setupStockData();
 		setupSupplierData();
@@ -52,6 +55,7 @@ public class InitialData {
 				"07752942456", "4567178954050231"));
 	}
 
+	
 	private void setupCustomerOrderData() {
 		customerOrders.add(new CustomerOrder(1, new ArrayList<Integer>(1), "This is an address honest gov",
 				"This is another address seriously honest gov", "John Smith", "JohnSmiths@Emial.com", 
@@ -71,6 +75,11 @@ public class InitialData {
 		productGroups.add(new ProductGroup(1, "Red Gnome", 1, 13000, 25, 45, 5, 50));
 		productGroups.add(new ProductGroup(2, "Blue Gnome", 2, 10000, 250, 55, 5, 50));
 		productGroups.add(new ProductGroup(3, "Green Gnome", 3, 8000, 2500, 35, 5, 50));
+	}
+	
+	private void setupProductItemData() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void setupPurchaseOrderData() {

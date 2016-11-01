@@ -1,4 +1,4 @@
-package project;
+package com.qac.nbg_app.entities;
 
 //Imports
 import javax.persistence.*;

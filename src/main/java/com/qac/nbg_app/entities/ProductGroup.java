@@ -1,5 +1,4 @@
-package project;
-import java.util.*;
+package com.qac.nbg_app.entities;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 

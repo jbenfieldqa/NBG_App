@@ -1,4 +1,4 @@
-package javaEE.project;
+package project;
 import javaEE.enums.Status;
 import javaEE.project.*;
 
