@@ -42,7 +42,7 @@ public class BrowseController implements Serializable{
 		return products;
 	}
 
-	private Pagination getPagination() {
+	public Pagination getPagination() {
 		if(pagination==null)
 			pagination = new Pagination(20) {
 				
