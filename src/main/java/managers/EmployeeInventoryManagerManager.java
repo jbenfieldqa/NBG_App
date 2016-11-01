@@ -1,6 +1,6 @@
-package javaEE.managers;
+package managers;
 
-import javaEE.project.EmployeeInventoryManager;
+import project.EmployeeInventoryManager;
 
 
 public interface EmployeeInventoryManagerManager {

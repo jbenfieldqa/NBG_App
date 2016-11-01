@@ -1,7 +1,7 @@
-package javaEE.managers;
+package managers;
 
 import java.util.*;
-import javaEE.project.EmployeeWarehouseWorker;
+import project.EmployeeWarehouseWorker;
 
 public interface EmployeeWarehouseWorkerManager {
 	public void persistWarehouseWorker (EmployeeWarehouseWorker e);

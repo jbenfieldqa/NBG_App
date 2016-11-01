@@ -1,6 +1,6 @@
-package javaEE.managers;
+package managers;
 import java.util.*;
-import javaEE.project.PurchaseOrder;
+import project.PurchaseOrder;
 
 public interface PurchaseOrderManager {
 	

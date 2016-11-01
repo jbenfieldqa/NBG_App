@@ -1,7 +1,7 @@
-package javaEE.managers;
+package managers;
 
 import java.util.*;
-import javaEE.project.CustomerOrder;
+import project.CustomerOrder;
 
 public interface CustomerOrderManager {
 	

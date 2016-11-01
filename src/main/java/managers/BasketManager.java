@@ -1,6 +1,6 @@
-package main.java.managers;
+package managers;
 
-import main.java.project.Basket;
+import project.Basket;
 
 
 public interface BasketManager {

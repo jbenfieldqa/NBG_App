@@ -1,6 +1,6 @@
-package javaEE.managers;
+package managers;
 import java.util.*;
-import javaEE.project.ProductGroup;
+import project.ProductGroup;
 
 public interface PGInterface {
 	public void productGroup(ProductGroup a);	

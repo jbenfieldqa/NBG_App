@@ -1,7 +1,7 @@
-package javaEE.managers;
+package managers;
 
 import java.util.*;
-import javaEE.project.Supplier;
+import project.Supplier;
 
 public interface SupplierManager {
 	public void persistSupplier (Supplier s);

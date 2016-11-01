@@ -1,7 +1,7 @@
-package javaEE.managers;
+package managers;
 
 import java.util.*;
-import javaEE.project.Wishlist;
+import project.Wishlist;
 
 public interface WishlistManager {
 	public void persistWishlist (Wishlist w);

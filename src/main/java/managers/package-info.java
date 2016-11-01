@@ -5,4 +5,4 @@
  * @author Administrator
  *
  */
-package javaEE.managers;
+package managers;

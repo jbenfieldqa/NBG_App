@@ -1,7 +1,7 @@
-package javaEE.managers;
+package managers;
 
 import java.util.*;
-import javaEE.project.Customer;
+import project.Customer;
 
 public interface CustomerManager {
 	public void persistCustomer (Customer c);
