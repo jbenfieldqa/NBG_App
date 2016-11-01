@@ -51,9 +51,12 @@
     	<artifactId>javaee-api</artifactId>
     	<version>7.0</version>
 	</dependency>
+  
+
+  
   </dependencies>
   
-      <build>
+     <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -65,5 +68,6 @@
         </configuration>
       </plugin>
     </plugins>
+
   </build>
 </project>
