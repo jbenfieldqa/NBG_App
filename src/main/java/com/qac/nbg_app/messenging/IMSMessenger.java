@@ -30,9 +30,9 @@ public class IMSMessenger {
 			
 			TopicConnectionFactory connectionFactory = (TopicConnectionFactory) context.lookup("ConnectionFactory");
 			Topic queue = (Topic) context.lookup("NBG-App_placedOrders");
-			connection = connectionFactory.createQueueConnection();
+			connection = ((QueueConnectionFactory) connectionFactory).createQueueConnection();
 			TopicSession session = (TopicSession) connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-			TopicPublisher sender = session.createSender(queue);
+			QueueSender sender = ((QueueSession) session).createSender((Queue) queue);
 		
 			//making the message
 			ObjectMessage message = session.createObjectMessage(placedOrder); 
