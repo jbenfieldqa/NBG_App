@@ -17,7 +17,11 @@
 							<div class="col-xs-4 col-md-3">
 								<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
 									<img id="productImage" src="Images/Zombies.jpg" />
-									<h4><h:commandLink action="#{products.view(product.id)}" value="#{product.name}" /></h4>
+									<h4>
+										<h:commandLink action="CatItem.xhtml" value="#{product.name}">
+											<f:param name="id" value="#{product.id}" />
+										</h:commandLink>
+									</h4>	
 									<p><h:outputText value="#{product.description}" /></p>
 								</div>
 							</div>

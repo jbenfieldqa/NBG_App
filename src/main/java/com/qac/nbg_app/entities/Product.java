@@ -36,6 +36,12 @@ public class Product {
 		this.name = name;
 		this.description = description;
 	}
+	
+	@Override
+	public String toString(){
+		String out = name + "\n" + description + "\n" + id;
+		return out;
+	}
 
 	public long getId() {
 		return id;
