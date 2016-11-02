@@ -368,6 +368,36 @@ ul.pagination li a.chosen {
 #sortByListSide li:hover, #numPerListSide li:hover {
     background-color: rgba(111, 212, 62, 0.1);
 }
+
+/*--------------------IMS Fiddle Page----------------------*/
+
+.imsWhole {
+    height: 1000px;
+}
+
+.imsSideNav{
+    border: solid medium black;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    background-color: antiquewhite
+}
+
+.imsNav {
+    width: 100%;
+    list-style: none;
+    position: relative;
+    left: -15px;
+}
+
+.imsNavLi {
+    width: 100%;
+}
+
+.imsBody{
+    width: 80%;
+}
+
 #RiotButton{
   text-align: center;
 }
@@ -378,8 +408,7 @@ ul.pagination li a.chosen {
 }
 
 .riot-card {
-	color: rgb(255,255,255);
-	background-color: rgba(150,25,25,0.7);
+	background-color: rgb(150,25,25);
 }
 /*--Sales Page--*/
 #Daily
