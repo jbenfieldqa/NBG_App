@@ -272,7 +272,7 @@ public class InitialData {
 		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
 		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
 		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
-		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
+		products.add(new Product("Gnome12", "This is gnome 12, it's naff"));
 		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
 		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
 		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
@@ -283,8 +283,6 @@ public class InitialData {
 		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
 		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
 		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
-		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
-		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
 		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
 		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
 		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
@@ -295,8 +293,6 @@ public class InitialData {
 		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
 		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
 		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
-		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
-		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
 		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
 		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
 		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
@@ -307,8 +303,6 @@ public class InitialData {
 		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
 		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
 		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
-		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
-		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
 	}
 	
 	public List<Product> getProducts() {
