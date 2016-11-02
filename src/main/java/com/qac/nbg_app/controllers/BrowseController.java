@@ -1,6 +1,9 @@
 package com.qac.nbg_app.controllers;
 
+import java.io.Console;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.model.DataModel;
@@ -19,6 +22,7 @@ public class BrowseController implements Serializable{
 	private BrowseService browseService;
 	private DataModel<Product> products = null;
 	private Pagination pagination;
+	private List<Integer> pages = new ArrayList<Integer>();
 	
 	public String next() {
 		getPagination().nextPage();
@@ -32,6 +36,24 @@ public class BrowseController implements Serializable{
 		return "browse";	
 	}
 	
+	public String toPage(int toPage){
+		toPage--;
+		int pageNum = getPagination().getPageNum();
+		if (toPage > pageNum){
+			for (int i = pageNum; i < toPage; i++){
+				getPagination().nextPage();
+				recreateModel();
+			}
+		}
+		else {
+			for (int i = pageNum; i > toPage; i--){
+				getPagination().previousPage();
+				recreateModel();
+			}
+		}
+		return "browse";
+	}
+	
 	private void recreateModel() {
 		products = null;
 	}
@@ -41,10 +63,19 @@ public class BrowseController implements Serializable{
 			products = getPagination().createDataModel();
 		return products;
 	}
+	
+	public List<Integer> getPages(){
+		if (pages.isEmpty()){
+			for	(int i = 0; i < getPagination().getNumOfPages(); i++){
+				pages.add(i + 1);
+			}
+		}
+		return pages;
+	}
 
 	public Pagination getPagination() {
 		if(pagination==null)
-			pagination = new Pagination(20) {
+			pagination = new Pagination(12) {
 				
 				@Override
 				public DataModel createDataModel() {
@@ -59,7 +90,23 @@ public class BrowseController implements Serializable{
 				public int getItemsCount() {
 					return browseService.findAll().size();
 				}
+				
+				@Override
+				public int getNumOfPages(){
+					int numOfPages = 1;
+					int i = pagination.getPageSize();
+					int cont = getItemsCount() - 1;
+					while (cont > i){
+						i += pagination.getPageSize();
+						numOfPages++;
+					}
+					return numOfPages;
+					
+				}
 			};
 		return pagination;
 	}
+	
+	
+	
 }
