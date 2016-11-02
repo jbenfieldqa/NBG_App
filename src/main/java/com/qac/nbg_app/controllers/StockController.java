@@ -12,6 +12,6 @@ import com.qac.nbg_app.util.InitialData;
 
 public class StockController<Stock> implements Serializable{
 	@Inject
-	private DataModel<Stock> stocklist = ;
+	private DataModel<Stock> stocklist = null;
 
 }
