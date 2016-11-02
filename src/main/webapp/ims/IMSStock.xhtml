@@ -19,49 +19,24 @@ template="/templates/IMSTemplate.xhtml">
 		</ul>
 		
 		<div id="Daily" class="TimePeriod">
-
-		  <div id="DailySalesContainer" style="height: 400px; width: 500px;"></div>
 		  <h2>Daily</h2>
 		  <p>Insert Sales Graph.</p>
+		  <div id="DailySalesContainer" style="height: 400px; width: 500px;"></div>
+
 		</div>
 		
 		<div id="Weekly" class="TimePeriod">
 		  <h2>Weekly</h2>
-		  <p>Insert Sales Graph.</p> 
+		  <p>Insert Sales Graph.</p>
+		  <div id="WeeklySalesContainer" style="height: 400px; width: 500px;"></div>
 		</div>
 		
 		<div id="Monthly" class="TimePeriod">
 		  <h2>Monthly</h2>
 		  <p>Insert Sales Graph.</p>
+		  <div id="MonthlySalesContainer" style="display: block;"></div>
 		</div>
-		
-	  <script type="text/javascript">
-			  window.onload = function () {
-			  
-			  var chart = new CanvasJS.Chart("DailySalesContainer",
-			  {
-				animationEnabled: true,
-				
-				title:{
-					text: "Gnomes Sold on the DD/MM/YYYY"
-				},
-				data: [
-				{
-					type: "column", //change type to bar, line, area, pie, etc
-					dataPoints: [
-						{ label: "Blue Gnome", y: 450 },
-						{ label: "Red Gnome", y: 488 },
-						{ label: "Green Gnome",  y: 351 },
-						{ label: "Zombie Gnome",  y: 658 },
-						{ label: "Santa Gnome",  y: 80 }
-					]
-				}
-				]
-				});
-
-			  chart.render();
-			}
-	  </script>
+	  <script type = "text/javascript" src = "js/salesGraphs/dailySales.js"></script>
 	<script type="text/javascript" src="js/jquery.canvasjs.min.js" />
 		<script type="text/javascript" src="js/tab.js" />
 	</ui:define> 
