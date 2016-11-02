@@ -1,0 +1,55 @@
+<ui:composition 
+	xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/CatTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="tabtitle">Catalogue</ui:define>
+	<ui:define name="maincontent">
+				
+		<div class="w3-container">
+			<h:form>
+				<h:outputText escape="false" value="No Products Found" rendered="#{browse.products.rowCount == 0}" />
+				<div id="productGrid">
+					<div class="w3-row-padding w3-center">
+						<ui:repeat var="product" value="#{browse.products}">
+							<div class="col-xs-4 col-md-3">
+								<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+									<img id="productImage" src="Images/Zombies.jpg" />
+									<h4><h:commandLink action="#{products.view(product.id)}" value="#{product.name}" /></h4>
+									<p><h:outputText value="#{product.description}" /></p>
+								</div>
+							</div>
+						</ui:repeat>
+					</div>
+					
+					<h:panelGroup class="center" rendered="#{browse.products.rowCount > 0}">
+						<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" />
+						<h:outputText value=" #{browse.pagination.pageFirstItem + 1}..#{browse.pagination.pageLastItem + 1}/#{browse.pagination.itemsCount} " />
+						<h:outputText value=" Number of pages = #{browse.pagination.numOfPages} " />
+						<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" />	
+						
+						<div class="w3-row-padding w3-center">
+							<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+								<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" />
+							</div>
+							<ui:repeat var="page" value="#{browse.pages}">
+									<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+										<h4><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></h4>
+									</div>
+							</ui:repeat>
+							<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+								<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" />
+							</div>
+						</div>	
+										
+					</h:panelGroup>
+						
+				</div>
+			</h:form>
+		</div>
+		
+	</ui:define>	
+	
+</ui:composition>
