@@ -8,36 +8,6 @@ template="/templates/IMSTemplate.xhtml">
  	<ui:define name="maincontent">
 			  
 			  <!-- Page Content -->
-  		<div id = "banner" class ="w3-container w3-green">
-		  <h5> Welcome to the NB Gardens IMS</h5>
-		</div>
-		
-		<ul class="w3-navbar">
-			 <li><a href="javascript:void(0)" onclick="openCity('Daily')">Daily</a></li>
-			 <li><a href="javascript:void(0)" onclick="openCity('Weekly')">Weekly</a></li>
-			 <li><a href="javascript:void(0)" onclick="openCity('Monthly')">Monthly</a></li>
-		</ul>
-		
-		<div id="Daily" class="TimePeriod">
-		  <h2>Daily</h2>
-		  <p>Insert Sales Graph.</p>
-		  <div id="DailySalesContainer" style="height: 400px; width: 500px;"></div>
 
-		</div>
-		
-		<div id="Weekly" class="TimePeriod">
-		  <h2>Weekly</h2>
-		  <p>Insert Sales Graph.</p>
-		  <div id="WeeklySalesContainer" style="height: 400px; width: 500px;"></div>
-		</div>
-		
-		<div id="Monthly" class="TimePeriod">
-		  <h2>Monthly</h2>
-		  <p>Insert Sales Graph.</p>
-		  <div id="MonthlySalesContainer" style="display: block;"></div>
-		</div>
-	  <script type = "text/javascript" src = "js/salesGraphs/dailySales.js"></script>
-	<script type="text/javascript" src="js/jquery.canvasjs.min.js" />
-		<script type="text/javascript" src="js/tab.js" />
 	</ui:define> 
 </ui:composition>

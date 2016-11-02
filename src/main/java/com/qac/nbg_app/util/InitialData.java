@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
+import javax.inject.Named;
 
 import com.qac.nbg_app.entities.*;
 
@@ -192,7 +193,8 @@ public class InitialData {
 	}
 	
 	//------------------------------------ Stock Data -------------------------------------------------
-	private void setupStockData() {
+
+	public void setupStockData() {
 		stockList.add(new Stock(1, 50));
 		stockList.add(new Stock(2, 25));
 		stockList.add(new Stock(3, 5));
