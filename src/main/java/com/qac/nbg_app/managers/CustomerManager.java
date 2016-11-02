@@ -15,5 +15,7 @@ public interface CustomerManager {
 	public void updateCustomer (Customer c);
 	
 	public void removeCustomer (Customer c);
+	public Customer findByUserPass(String lowerCase, String pass);
+	public String getUserID(String lowerCase);
 
 }
