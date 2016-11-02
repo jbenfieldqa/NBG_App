@@ -27,6 +27,8 @@ public class InitialData {
 	private List<Wishlist> wishlists =  new ArrayList<Wishlist>();
 	private List<Supplier> suppliers =  new ArrayList<Supplier>();
 	
+	private List<Product> products = new ArrayList<Product>();
+	
 	@PostConstruct
 	public void setupData() {
 		setupBasketData();
@@ -39,6 +41,8 @@ public class InitialData {
 		setupStockData();
 		setupSupplierData();
 		setupWishlistData();
+		
+		setupProductData();
 	}
 
 	//------------------------------------ Basket Data -------------------------------------------------
@@ -256,9 +260,59 @@ public class InitialData {
 	}
 
 	//------------------------------------ Product Data -------------------------------------------------
+	private void setupProductData() {
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
+		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
+		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
+		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
+		products.add(new Product("Gnome12", "This is gnome 12, it's great"));
+	}
+	
 	public List<Product> getProducts() {
-		// TODO Auto-generated method stub
-		return null;
+		return products;
 	}
 	
 	
