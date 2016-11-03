@@ -8,12 +8,12 @@ import com.qac.nbg_app.managers.CustomerManager;
 
 @Stateless
 public class LoginService {
-	@Inject
-	CustomerManager custManager;
+	@Inject 
+	private CustomerManager custManager;
 	
 	public boolean validateDetails(String email, String pass) {
-		Customer cust = custManager.findByUserPass(email.toLowerCase(), pass);
-		if(cust != null)
+		Customer customer = custManager.findByUserPass(email.toLowerCase(), pass);
+		if(customer != null)
 			return true;
 		return false;
 	}

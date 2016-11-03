@@ -65,11 +65,11 @@ public class InitialData {
 	
 	//------------------------------------ Customer Data -------------------------------------------------
 	private void setupCustomerdata() {
-		customers.add(new Customer("John", "Smith", "IMissSelasi@Devastated.com",
+		customers.add(new Customer("John", "Smith", "IMissSelasi@Devastated.com", "Gnomes4Lyfe",
 				"07562942456", "4567188924056659"));
-		customers.add(new Customer("Selasi", "Gbormittah", "SelasiIsAwesome@GBBIsAFix.com",
+		customers.add(new Customer("Selasi", "Gbormittah", "SelasiIsAwesome@GBBIsAFix.com", "AllGlory2Gnomes",
 				"07182942456", "4567145894055421"));
-		customers.add(new Customer("Rav", "Bansal", "RavishingRav99@TastyFlavours.co.uk",
+		customers.add(new Customer("Rav", "Bansal", "RavishingRav99@TastyFlavours.co.uk", "GnomeHome",
 				"07752942456", "4567178954050231"));
 	}
 	
