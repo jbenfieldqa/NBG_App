@@ -5,10 +5,10 @@ import java.util.*;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.ProductGroup;
-import com.qac.nbg_app.managers.PGInterface;
+import com.qac.nbg_app.managers.ProductGroupManager;
 import com.qac.nbg_app.util.InitialData;
 
-public class ProductGroupOffline implements PGInterface{
+public abstract class ProductGroupOffline implements ProductGroupManager{
 	@Inject
 	private InitialData initialData;
 	
