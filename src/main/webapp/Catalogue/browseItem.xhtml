@@ -1,0 +1,27 @@
+<ui:composition 
+	xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/CatTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="tabtitle">Catalogue</ui:define>
+	<ui:define name="maincontent">
+				
+		<div class="w3-container">
+			<div id="productGrid">
+				<div id="productCard" class="productCard">
+					<div class="w3-row-padding w3-center">
+						<img id="productPageImage" class="col-md-6 col-xs-12" src="Images/Zombies.jpg" />
+						<div id="itemPageDetails" class="col-md-6 col-xs-12">
+							<h3>#{product.name()}</h3>
+							<p>#{product.description()}</p>
+						</div>
+					</div>						
+				</div>
+			</div>
+		</div>
+		
+	</ui:define>	
+	
+</ui:composition>

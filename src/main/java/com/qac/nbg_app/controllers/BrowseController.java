@@ -1,6 +1,5 @@
 package com.qac.nbg_app.controllers;
 
-import java.io.Console;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +60,7 @@ public class BrowseController implements Serializable{
 	public DataModel<Product> getProducts() {
 		if(products == null)
 			products = getPagination().createDataModel();
+		
 		return products;
 	}
 	
@@ -105,10 +105,6 @@ public class BrowseController implements Serializable{
 				}
 			};
 		return pagination;
-	}
-
-	
-	
-	
+	}	
 	
 }
