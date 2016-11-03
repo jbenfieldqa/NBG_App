@@ -1,6 +1,8 @@
 package com.qac.nbg_app.controllers;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
 
@@ -17,6 +19,8 @@ public class ProductController implements Serializable{
 	@Inject
 	private BrowseService browseService;
 	private Product testProduct;
+	private List<Product> products = new ArrayList<Product>();
+	private List<Product> similairProducts = new ArrayList<Product>();
 	
 	public String itemClick(Product p){
 		testProduct = p;
@@ -33,6 +37,19 @@ public class ProductController implements Serializable{
 	
 	public String description(){
 		return testProduct.getDescription();
+	}
+	
+	public void showSimilair(int count){
+		if (products.isEmpty()){
+			getProducts();
+		}
+		for	(int i = 0; i < count; i++){
+			similairProducts.add(products.get(i));
+		}
+	}
+	
+	private void getProducts(){
+		products = browseService.findAll();
 	}
 	
 }
