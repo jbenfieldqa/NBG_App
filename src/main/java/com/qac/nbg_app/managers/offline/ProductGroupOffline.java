@@ -2,14 +2,17 @@ package  com.qac.nbg_app.managers.offline;
 
 import java.util.*;
 
-import javax.inject.Inject;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 
 import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.managers.ProductGroupManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Stateless
+@Default
 public abstract class ProductGroupOffline implements ProductGroupManager{
-	@Inject
+	
 	private InitialData initialData;
 	
 	public void productGroup(ProductGroup a) {

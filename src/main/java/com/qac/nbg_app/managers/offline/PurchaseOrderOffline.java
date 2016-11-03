@@ -3,13 +3,16 @@ package com.qac.nbg_app.managers.offline;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.PurchaseOrder;
 import com.qac.nbg_app.managers.PurchaseOrderManager;
 import com.qac.nbg_app.util.InitialData;
 
-
+@Stateless
+@Default
 public class PurchaseOrderOffline implements PurchaseOrderManager{
 	
 	@Inject

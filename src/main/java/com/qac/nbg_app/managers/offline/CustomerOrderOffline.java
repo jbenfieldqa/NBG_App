@@ -2,6 +2,8 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Customer;
@@ -9,6 +11,8 @@ import com.qac.nbg_app.entities.CustomerOrder;
 import com.qac.nbg_app.managers.CustomerOrderManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Stateless
+@Default
 public abstract class CustomerOrderOffline implements CustomerOrderManager{
 
 	@Inject

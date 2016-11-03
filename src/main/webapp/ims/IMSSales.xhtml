@@ -26,13 +26,9 @@ template="/templates/IMSTemplate.xhtml">
 	  		<div class = "w3-half">
 	  		<div id = "PageCard" class = "w3-card-2 w3-padding-top productCard">
 	  	 	<p>Display Table chart with  sales information</p>
-	  	 	<table class="w3-table">
-	
 			<ui:repeat var="productGroupTable" vaule= "#{ProductGroup.productGroupList}">
 			<p><h:outputText value="#{productGroupList.productName}" /></p>
 			</ui:repeat>
-				
-			</table>
 	  	 	</div>
 	  		</div>
 		  	<div class ="w3-half">

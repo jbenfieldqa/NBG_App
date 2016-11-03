@@ -2,12 +2,16 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Stock;
 import com.qac.nbg_app.managers.StockManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Stateless
+@Default
 public abstract class StockOffline implements StockManager{
 
 	@Inject
