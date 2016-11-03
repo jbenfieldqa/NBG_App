@@ -10,9 +10,11 @@ import javax.inject.Inject;
 import com.qac.nbg_app.entities.Customer;
 import com.qac.nbg_app.managers.CustomerManager;
 import com.qac.nbg_app.util.InitialData;
+import javax.enterprise.inject.Alternative;
 
-@Stateless
+@Alternative
 @Default
+@Stateless
 public abstract class CustomerOffline implements CustomerManager{
 	
 	@Inject
@@ -45,8 +47,7 @@ public abstract class CustomerOffline implements CustomerManager{
 		for(int i=0; i<cs.size(); i++) {
 			if(cs.get(i).equals(c))cs.set(i, c);
 		}
-		initialData.setCustomers(cs);
-		
+		initialData.setCustomers(cs);		
 	}
 
 	@Override

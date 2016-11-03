@@ -9,7 +9,7 @@ import com.qac.nbg_app.managers.CustomerManager;
 @Stateless
 public class LoginService {
 	@Inject 
-	private CustomerManager custManager;
+	CustomerManager custManager;
 	
 	public boolean validateDetails(String email, String pass) {
 		Customer customer = custManager.findByUserPass(email.toLowerCase(), pass);
