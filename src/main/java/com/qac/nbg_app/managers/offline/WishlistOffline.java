@@ -2,12 +2,16 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.*;
 
 import com.qac.nbg_app.entities.Wishlist;
 import com.qac.nbg_app.managers.WishlistManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Default
+@Stateless
 public class WishlistOffline implements WishlistManager {
 	
 	@Inject

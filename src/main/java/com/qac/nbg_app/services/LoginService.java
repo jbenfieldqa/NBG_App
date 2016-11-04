@@ -11,8 +11,8 @@ public class LoginService {
 	@Inject 
 	CustomerManager custManager;
 	
-	public boolean validateDetails(String email, String pass) {
-		Customer customer = custManager.findByUserPass(email.toLowerCase(), pass);
+	public boolean validateDetails(String email, String password) {
+		Customer customer = custManager.findByUserPass(email.toLowerCase(), password);
 		if(customer != null)
 			return true;
 		return false;

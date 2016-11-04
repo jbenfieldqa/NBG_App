@@ -2,12 +2,16 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.*;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.EmployeeInventoryManager;
 import com.qac.nbg_app.managers.EmployeeInventoryManagerManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Default
+@Stateless
 public abstract class EmployeeInventoryManagerOffline implements EmployeeInventoryManagerManager{
 
 	@Inject

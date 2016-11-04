@@ -4,18 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.enterprise.inject.Alternative;
 import javax.enterprise.inject.Default;
+import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Customer;
 import com.qac.nbg_app.managers.CustomerManager;
 import com.qac.nbg_app.util.InitialData;
-import javax.enterprise.inject.Alternative;
 
 @Alternative
 @Default
 @Stateless
-public abstract class CustomerOffline implements CustomerManager{
+@SessionScoped
+public class CustomerOffline implements CustomerManager {
 	
 	@Inject
 	private InitialData initialData;

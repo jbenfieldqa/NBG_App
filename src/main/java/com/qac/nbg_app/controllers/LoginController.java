@@ -11,7 +11,7 @@ import com.qac.nbg_app.util.UserCredentials;
 @RequestScoped
 public class LoginController {
 	@Inject
-	LoginService loginService;
+	private LoginService loginService;
 	@Inject
 	UserCredentials userCredentials;
 	private String email = "";

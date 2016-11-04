@@ -2,13 +2,16 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.*;
 
 import com.qac.nbg_app.entities.Basket;
 import com.qac.nbg_app.managers.BasketManager;
 import com.qac.nbg_app.util.InitialData;
 
-
+@Stateless
+@Default
 public class BasketOffline implements BasketManager{
 	@Inject
 	private InitialData initialData;
