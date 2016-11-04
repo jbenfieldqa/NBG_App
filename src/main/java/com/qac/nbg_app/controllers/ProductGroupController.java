@@ -20,7 +20,7 @@ public class ProductGroupController implements Serializable{
 	
 	public DataModel<ProductGroup> createDataModel(){
 		System.out.println("Called");
-		return new ListDataModel<ProductGroup>(ProductGroupService.findAll().subList(0, 2));
+		return new ListDataModel<ProductGroup>(ProductGroupService.findAll().subList(0, 3));
 	}
 	public DataModel<ProductGroup> getProductGroups()
 	{

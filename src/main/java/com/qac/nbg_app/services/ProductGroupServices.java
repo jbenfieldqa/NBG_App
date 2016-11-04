@@ -10,7 +10,7 @@ import com.qac.nbg_app.managers.ProductGroupManager;
 
 @Stateless
 public class ProductGroupServices {
-	@Inject 
+	@Inject
 	private ProductGroupManager productGroupManager;
 	
 	public List<ProductGroup> findAll(){

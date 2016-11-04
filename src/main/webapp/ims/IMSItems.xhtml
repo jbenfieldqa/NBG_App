@@ -23,7 +23,7 @@ template="/templates/IMSTemplate.xhtml">
 		<div>
 		<p>Print stuff here</p>
 		<ui:repeat var="productGroupInfo" value="#{ProductGroup.productGroups}">
-			<p><h:outputText value="#{productGroupInfo.productName}" /></p>	
+			<p><h:outputText value="#{productGroupInfo.productGroupId} #{productGroupInfo.productName}" /></p>	
 		</ui:repeat>
 		</div>
 		</div>
