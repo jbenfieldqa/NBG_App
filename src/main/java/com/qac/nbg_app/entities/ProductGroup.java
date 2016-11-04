@@ -5,16 +5,6 @@ import javax.validation.constraints.*;
 @Entity 
 @Table(name = "ProductGroup")
 
-@NamedQueries ({
-@NamedQuery (name="ProductGroup.findAllProductGroups",
-query = "SELECT a FROM ProductGroup a"),
-@NamedQuery (name="ProductGroup.findByProductName",
-query = "SELECT c FROM ProductGroup c WHERE c.productName = :name"),
-@NamedQuery (name="ProductGroup.find_by_productGroupId",
-query = "SELECT b FROM ProductGroup b WHERE b.productGroupId = :name"),
-
-})
-
 public class ProductGroup {
 	@Id 
 	@Column(name="productGroupId")

@@ -8,6 +8,12 @@ template="/templates/IMSTemplate.xhtml">
  	<ui:define name="maincontent">
 			  
 			  <!-- Page Content -->
+			 <ui:repeat var="product" vaule="#{ProductGroup.productGroups()}">
+				<div class = "col-xs-4 col-lg-3">
+					<p><h:outputText value = "#{product.productName}"/></p>
+					<p>Print stuff here</p>
+				</div>
+			</ui:repeat>
 
 	</ui:define> 
 </ui:composition>
