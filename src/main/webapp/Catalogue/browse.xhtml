@@ -9,20 +9,42 @@
 	<ui:define name="maincontent">
 				
 		<div class="w3-container">
+			
+			<button id="filterAccordion" class="accordion w3-card-2"><h4 id="filterTitle">Filter Results</h4></button>
+            <div class="panel w3-card-2">
+                <h:form>
+                    <h4>Sort results by</h4>
+                    <ul id="sortByList">
+                        <li id="nameAZ" class="selected">Name A-Z</li>
+                        <li id="nameZA">Name Z-A</li>
+                        <li id="priceHigh">Price highest</li>
+                        <li id="priceLow">Price lowest</li>
+                    </ul>
+                    <br></br><br></br>
+                    <h4>Products per page</h4>
+                    <ul id="numPerList">
+                        <h:commandLink class="selected" action="#{browse.setNumPerPage(12)}"><li>12</li></h:commandLink>
+                        <h:commandLink action="#{browse.setNumPerPage(24)}"><li>24</li></h:commandLink>
+                        <h:commandLink action="#{browse.setNumPerPage(36)}"><li>36</li></h:commandLink>
+                        <h:commandLink action="#{browse.setNumPerPage(48)}"><li>48</li></h:commandLink>
+                    </ul>
+                    <br></br><br></br>             
+                </h:form>
+            </div>
+			
 			<h:form>
 				<h:outputText escape="false" value="No Products Found" rendered="#{browse.products.rowCount == 0}" />
 				<div id="productGrid">
 					<div class="w3-row-padding w3-center">
 						<ui:repeat var="item" value="#{browse.products}">
 							<div class="col-xs-4 col-md-3">
-								<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-									<img id="productImage" src="Images/Zombies.jpg" />
-									<h4>
-										<h:commandLink action="#{product.itemClick(item)}" value="#{item.name}">
-										</h:commandLink>
-									</h4>	
-									<p><h:outputText value="#{item.description}" /></p>
-								</div>
+								<h:commandLink action="#{product.itemClick(item)}">
+									<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
+										<img id="productImage" src="Images/Zombies.jpg" />
+										<h4>#{item.name}</h4>	
+										<p><h:outputText value="#{item.description}" /></p>
+									</div>
+								</h:commandLink>
 							</div>
 						</ui:repeat>
 					</div>
@@ -47,6 +69,28 @@
 							</div>
 						</div>	
 										
+						<div id="pageNav">
+		                   	<ul class="pagination">
+		                       	<!-- <li><a class="chosen" href="#">1</a></li> -->
+		                       	<ui:repeat var="page" value="#{browse.pages}">
+									<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
+									
+									<!--
+									<c:choose>
+									    <c:when test="#{some.test}">
+									        <p>some.test is true</p>
+									    </c:when>
+									    <c:otherwise>
+									        <p>some.test is not true</p>
+									    </c:otherwise>
+									</c:choose> 
+									 -->
+									
+								</ui:repeat>
+		                       	<li><a href="Catalogue3.html">Next</a></li>
+		                   	</ul>
+			            </div>				
+						
 					</h:panelGroup>
 						
 				</div>

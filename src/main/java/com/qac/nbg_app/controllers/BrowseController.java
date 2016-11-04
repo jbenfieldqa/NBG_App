@@ -22,22 +22,24 @@ public class BrowseController implements Serializable{
 	private DataModel<Product> products = null;
 	private Pagination pagination;
 	private List<Integer> pages = new ArrayList<Integer>();
+	private int numPerPage = 12;
+	private int pageNum = 1;
 	
 	public String next() {
 		getPagination().nextPage();
 		recreateModel();
-		return "browse";
+		return "CatCatalogue";
 	}
 	
 	public String previous() {
 		getPagination().previousPage();
 		recreateModel();
-		return "browse";	
+		return "CatCatalogue";	
 	}
 	
 	public String toPage(int toPage){
 		toPage--;
-		int pageNum = getPagination().getPageNum();
+		pageNum = getPagination().getPageNum();
 		if (toPage > pageNum){
 			for (int i = pageNum; i < toPage; i++){
 				getPagination().nextPage();
@@ -50,7 +52,7 @@ public class BrowseController implements Serializable{
 				recreateModel();
 			}
 		}
-		return "browse";
+		return "CatCatalogue";
 	}
 	
 	private void recreateModel() {
@@ -75,7 +77,7 @@ public class BrowseController implements Serializable{
 
 	public Pagination getPagination() {
 		if(pagination==null)
-			pagination = new Pagination(12) {
+			pagination = new Pagination(numPerPage) {
 				
 				@Override
 				public DataModel createDataModel() {
@@ -107,4 +109,17 @@ public class BrowseController implements Serializable{
 		return pagination;
 	}	
 	
+	public String setNumPerPage(int num){
+		numPerPage = num;
+		pagination = null;
+		recreateModel();
+		return "CatCatalogue";
+	}
+	
+	public void toNumPage(){
+		System.out.println(pageNum);
+		pageNum = getPagination().getPageNum();
+		System.out.println("- - - - - - -");
+		System.out.println(pageNum);
+	}
 }
