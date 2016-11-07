@@ -10,8 +10,9 @@ import com.qac.nbg_app.entities.EmployeeInventoryManager;
 import com.qac.nbg_app.managers.EmployeeInventoryManagerManager;
 import com.qac.nbg_app.util.InitialData;
 
-@Default
+
 @Stateless
+@Default
 public abstract class EmployeeInventoryManagerOffline implements EmployeeInventoryManagerManager{
 
 	@Inject

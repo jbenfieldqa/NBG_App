@@ -8,61 +8,12 @@ template="/templates/IMSTemplate.xhtml">
  	<ui:define name="maincontent">
 			  
 			  <!-- Page Content -->
-  		<div id = "banner" class ="w3-container w3-green">
-		  <h5> Welcome to the NB Gardens IMS</h5>
-		</div>
-		
-		<ul class="w3-navbar">
-			 <li><a href="javascript:void(0)" onclick="openCity('Daily')">Daily</a></li>
-			 <li><a href="javascript:void(0)" onclick="openCity('Weekly')">Weekly</a></li>
-			 <li><a href="javascript:void(0)" onclick="openCity('Monthly')">Monthly</a></li>
-		</ul>
-		
-		<div id="Daily" class="TimePeriod">
+			 <ui:repeat var="product" vaule="#{ProductGroup.productGroups()}">
+				<div class = "col-xs-4 col-lg-3">
+					<p><h:outputText value = "#{product.productName}"/></p>
+					<p>Print stuff here</p>
+				</div>
+			</ui:repeat>
 
-		  <div id="DailySalesContainer" style="height: 400px; width: 500px;"></div>
-		  <h2>Daily</h2>
-		  <p>Insert Sales Graph.</p>
-		</div>
-		
-		<div id="Weekly" class="TimePeriod">
-		  <h2>Weekly</h2>
-		  <p>Insert Sales Graph.</p> 
-		</div>
-		
-		<div id="Monthly" class="TimePeriod">
-		  <h2>Monthly</h2>
-		  <p>Insert Sales Graph.</p>
-		</div>
-		
-	  <script type="text/javascript">
-			  window.onload = function () {
-			  
-			  var chart = new CanvasJS.Chart("DailySalesContainer",
-			  {
-				animationEnabled: true,
-				
-				title:{
-					text: "Gnomes Sold on the DD/MM/YYYY"
-				},
-				data: [
-				{
-					type: "column", //change type to bar, line, area, pie, etc
-					dataPoints: [
-						{ label: "Blue Gnome", y: 450 },
-						{ label: "Red Gnome", y: 488 },
-						{ label: "Green Gnome",  y: 351 },
-						{ label: "Zombie Gnome",  y: 658 },
-						{ label: "Santa Gnome",  y: 80 }
-					]
-				}
-				]
-				});
-
-			  chart.render();
-			}
-	  </script>
-	<script type="text/javascript" src="js/jquery.canvasjs.min.js" />
-		<script type="text/javascript" src="js/tab.js" />
 	</ui:define> 
 </ui:composition>

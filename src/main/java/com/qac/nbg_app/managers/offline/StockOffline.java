@@ -10,8 +10,9 @@ import com.qac.nbg_app.entities.Stock;
 import com.qac.nbg_app.managers.StockManager;
 import com.qac.nbg_app.util.InitialData;
 
-@Default
+
 @Stateless
+@Default
 public abstract class StockOffline implements StockManager{
 
 	@Inject
