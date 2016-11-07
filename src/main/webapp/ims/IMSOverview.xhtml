@@ -9,6 +9,7 @@ template="/templates/IMSTemplate.xhtml">
 	
 
 		<!--banner-->
+		<body>
 		<div id = "banner" class ="w3-container w3-green">
 		  <h5> Welcome to the NB Gardens IMS</h5>
 		</div>
@@ -17,7 +18,7 @@ template="/templates/IMSTemplate.xhtml">
 		  <div id = "displayStats">
 			<div class = "w3-row-padding w3-center">
 			  <div class= "w3-half">
-				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow" onclick="location.href='Stock.html'">
+				<div id = "displayCard" class = "w3-card-2 w3-padding-top productCard hvr-grow" onclick="location.href='IMSStock.xhtml'">
 				  <!--sales graphs-->
 				  <h4 id = "displayCardTitle" align="center">Sales</h4>
 				  <h4>Sales info</h4>
@@ -47,6 +48,7 @@ template="/templates/IMSTemplate.xhtml">
 			</div>
 		  </div>
 		</div>
+		</body>
 	  <script type="text/javascript">
 			  window.onload = function () {
 			  var chart = new CanvasJS.Chart("chartContainer",
