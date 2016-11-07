@@ -3,12 +3,16 @@ package com.qac.nbg_app.managers.offline;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Customer;
 import com.qac.nbg_app.managers.CustomerManager;
 import com.qac.nbg_app.util.InitialData;
 
+@Stateless
+@Default
 public abstract class CustomerOffline implements CustomerManager{
 	@Inject
 	private InitialData initialData;

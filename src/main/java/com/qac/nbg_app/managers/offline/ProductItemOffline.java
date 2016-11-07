@@ -2,10 +2,15 @@ package com.qac.nbg_app.managers.offline;
 
 import java.util.*;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+
 import com.qac.nbg_app.entities.ProductItem;
 import com.qac.nbg_app.managers.ProdItemInterface;
 import com.qac.nbg_app.util.InitialData;
 
+@Stateless
+@Default
 public class ProductItemOffline implements ProdItemInterface {
 	private InitialData initialData; 
 	
