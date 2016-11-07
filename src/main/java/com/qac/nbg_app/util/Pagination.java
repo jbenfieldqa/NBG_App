@@ -5,19 +5,22 @@ import javax.faces.model.DataModel;
 public abstract class Pagination {
 	private int pageSize;
 	private int page;
+	private int pageNum;
 	
 	public Pagination(int pageSize) {
 		this.pageSize = pageSize;
+		this.pageNum = 1;
 	}
 
 	abstract public DataModel createDataModel();
 	abstract public int getItemsCount();
+	abstract public int getNumOfPages();
 	
 	public int getPageFirstItem() {
 		return page * pageSize;
 	}
 	
-	protected int getPageSize() {
+	public int getPageSize() {
 		return pageSize;
 	}
 	
@@ -46,10 +49,14 @@ public abstract class Pagination {
 	public int getPageLastItem() {
 		int i = getPageFirstItem() + pageSize - 1;
 		int cont = getItemsCount() - 1;
-		if(cont > i)
-			i = cont;
-		if (i < 0)
-			i = 0;
-		return i;
+		if(cont < i){
+			return cont;
+		}else return i;
 	}
+
+	public int getPageNum() {
+		return page;
+	}
+	
+	
 }
