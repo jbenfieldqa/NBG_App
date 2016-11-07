@@ -2,23 +2,28 @@ package  com.qac.nbg_app.managers.offline;
 
 import java.util.*;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.ProductGroup;
-import com.qac.nbg_app.managers.PGInterface;
+import com.qac.nbg_app.managers.ProductGroupManager;
 import com.qac.nbg_app.util.InitialData;
 
-public class ProductGroupOffline implements PGInterface{
+@Stateless
+@Default
+public class ProductGroupOffline implements ProductGroupManager{
 	@Inject
 	private InitialData initialData;
 	
+	@Override
+	public List<ProductGroup> findAll(){
+		return initialData.getProductGroups();
+	}
 	public void productGroup(ProductGroup a) {
 		initialData.addProductGroup(a); 
 	}
-	
-	public List<ProductGroup> listProductGroups(){
-		return initialData.getProductGroups();
-	}
+
 
 
 	public ProductGroup findByPGName(String name) {

@@ -22,7 +22,7 @@ template="/templates/IMSTemplate.xhtml">
 				  <!--sales graphs-->
 				  <h4 id = "displayCardTitle" align="center">Sales</h4>
 				  <h4>Sales info</h4>
-				  <div id="chartContainer" style="height: 75%; width: 100%;"></div>
+				  <div id="DailySalesContainer" style="height: 75%; width: 100%;"></div>
 				</div>
 			  </div>
 			  <div class= "w3-half">
@@ -49,31 +49,8 @@ template="/templates/IMSTemplate.xhtml">
 		  </div>
 		</div>
 		</body>
-	  <script type="text/javascript">
-			  window.onload = function () {
-			  var chart = new CanvasJS.Chart("chartContainer",
-			  {
-				animationEnabled: true,
-				title:{
-					text: "Gnomes Sold on the DD/MM/YYYY"
-				},
-				data: [
-				{
-					type: "column", //change type to bar, line, area, pie, etc
-					dataPoints: [
-						{ label: "Blue Gnome", y: 450 },
-						{ label: "Red Gnome", y: 488 },
-						{ label: "Green Gnome",  y: 351 },
-						{ label: "Zombie Gnome",  y: 658 },
-						{ label: "Santa Gnome",  y: 80 }
-					]
-				}
-				]
-				});
+	  <script type="text/javascript" src = "js/salesGraphs/Sales.js"></script>
 
-			  chart.render();
-			}
-	  </script>
 	<script type="text/javascript" src="js/jquery.canvasjs.min.js" />
 	</ui:define> 
 </ui:composition>
