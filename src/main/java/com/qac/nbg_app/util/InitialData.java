@@ -304,6 +304,51 @@ public class InitialData {
 		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
 		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
 		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome11", "This is gnome 11, it's great"));
+		products.add(new Product("Gnome12", "Crawling through the garden \nHunting for some flesh "
+				+ "\nThis poor gnome's legs are gone \nHe's really quite a mess.. \nSearching for his prey "
+				+ "\nAnd spreading viral death \nAlways on the lookout \nFor another to infect! \nWon't you be his victim? "
+				+ "\nInfected like the rest \nPut him in your garden \nYou can be his next!"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
+		products.add(new Product("Gnome1", "This is gnome 1, it's great"));	
+		products.add(new Product("Gnome2", "This is gnome 2, it's great"));
+		products.add(new Product("Gnome3", "This is gnome 3, it's great"));
+		products.add(new Product("Gnome4", "This is gnome 4, it's great"));
+		products.add(new Product("Gnome5", "This is gnome 5, it's great"));
+		products.add(new Product("Gnome6", "This is gnome 6, it's great"));
+		products.add(new Product("Gnome7", "This is gnome 7, it's great"));
+		products.add(new Product("Gnome8", "This is gnome 8, it's great"));
+		products.add(new Product("Gnome9", "This is gnome 9, it's great"));
+		products.add(new Product("Gnome10", "This is gnome 10, it's great"));
 	}
 	
 	public List<Product> getProducts() {

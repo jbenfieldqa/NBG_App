@@ -7,7 +7,7 @@ $(document).ready(function(){
         $("#sidenav").animate({left: '-200px'});
     });
     
-    /*
+    /* --------------Cannot remeber if this was being kept for a rainy day or not----------------------------
     $(".productCard").hover(function(){
         $(this).css("background-color", "#ddd");
         $(".addToBtn").css("backround-color", "rgba(111, 212, 62, 0.8)");
