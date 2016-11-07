@@ -58,6 +58,7 @@
 body {
     font-family: "Trebuchet MS", sans-serif;
 }
+
 img {
 	width: 100%;
 	display: block;
@@ -68,6 +69,7 @@ img {
     max-width: 1000px;
     margin: auto;
 }
+
 #news-one {
 	background: rgba(111, 212, 62, 0.2);
 	margin: 5px;
@@ -81,7 +83,7 @@ img {
 
 header {
     background-color: rgb(100,200,100);
-    background-image: url("Images/GnomeBanner.png");
+    background-image: url("Images/Banner.png");
     color: white;
     height: 225px;
 }
