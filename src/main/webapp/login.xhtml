@@ -14,17 +14,17 @@
             <div class="w3-row-padding">
                 <div class="w3-col l6">
                     <div class="w3-card-2 loginCard">
-                        <form>
+                        <h:form>
                             <h2>Login</h2>
                             <br></br>
                             <h4>Email</h4>
                             <h:inputText class="input form-control" value="#{login.email}" type="email" required="true" requiredMessage="Enter Email" />
                             <h4>Password</h4>
-                            <h:inputSecret class="input password form-control" value="{login.password}" type="password" required="true" requiredMessage="Enter Password" />
+                            <h:inputSecret class="input password form-control" value="#{login.password}" type="password" required="true" requiredMessage="Enter Password" />
                             <br></br>
                             <br></br>
-                            <h:commandButton class="btn btn-success submit" type="submit" action="#{login.login()}" value="Login" />
-                        </form>
+                            <h:commandButton id="loginBtn" class="btn btn-success submit" type="submit" action="#{login.login()}" value="Login" />
+                        </h:form>
                     </div>
                 </div>
                 
@@ -49,7 +49,7 @@
                             <input class="input password" type="password" name="checkPassword" />
                             <br></br>
                             <br></br>
-                            <input type="submit" value="Begin registration" />
+                            <input class="btn btn-success submit" type="submit" value="Begin registration" />
                         </form>
                     </div>
                 </div>

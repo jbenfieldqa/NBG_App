@@ -14,9 +14,9 @@ public class LoginController {
 	private LoginService loginService;
 	@Inject
 	UserCredentials userCredentials;
-	private String email = "";
-	private String password = "";
-	private String error = "";
+	private String email;
+	private String password;
+	private String error;
 	
 	public String login() {
 		if (email.equals("")){
@@ -63,7 +63,14 @@ public class LoginController {
 	public String getError() {
 		return error;
 	}
-	
+	public boolean checkName()
+	{
+		if(email != null)
+			System.out.println("Name in system");
+		else System.out.println("value doesn't exist");
+		return true;
+			
+	}
 	
 
 }
