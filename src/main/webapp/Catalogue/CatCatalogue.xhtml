@@ -14,6 +14,7 @@
             <button id="filterAccordion" class="accordion w3-card-2"><h4 id="filterTitle">Filter Results</h4></button>
             <div class="panel w3-card-2">
                 <h:form>
+                	<!-- 	Not yet made to Work
                     <h4>Sort results by</h4>
                     <ul id="sortByList">
                         <li id="nameAZ" class="selected">Name A-Z</li>
@@ -22,12 +23,16 @@
                         <li id="priceLow">Price lowest</li>
                     </ul>
                     <br></br><br></br>
+                    -->
                     <h4>Products per page</h4>
                     <ul id="numPerList">
-                        <h:commandLink class="selected" action="#{browse.setNumPerPage(12)}"><li id="12" class="selected">12</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(24)}"><li id="24">24</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(36)}"><li id="36">36</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(48)}"><li id="48">48</li></h:commandLink>
+                       	<ui:repeat var="option" value="#{browse.lowerOptions}">
+							<li><h:commandLink value="#{option}" action="#{browse.setNumPerPage(option)}" /></li>
+						</ui:repeat>
+						<li class="selected"><h:commandLink class="selected" value="#{browse.numPerPage}" action="#{browse.setNumPerPage(option)}" /></li>
+						<ui:repeat var="option" value="#{browse.higherOptions}">
+							<li><h:commandLink value="#{option}" action="#{browse.setNumPerPage(option)}" /></li>
+						</ui:repeat>
                     </ul>
                     <br></br><br></br>             
                 </h:form>
@@ -45,37 +50,26 @@
 									<h:commandLink action="#{product.itemClick(item)}" value="#{item.name}">
 									</h:commandLink>
 								</h4>	
-								<p><h:outputText value="#{item.description}" /></p>
+								<p><h:outputText value="#{browse.getItemDescription(item.description)}" /></p>
 								<a class="w3-btn addToBtn" href="CatBasket.xhtml">Add to cart</a> 
 							</div>
 						</div>
 					</ui:repeat>
-						
-					<div class="w3-row-padding w3-center">
-						<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-							<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" />
-						</div>
-						<ui:repeat var="page" value="#{browse.pages}">
-								<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-									<h4><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></h4>
-								</div>
-						</ui:repeat>
-						<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-							<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" />
-						</div>
-					</div>		
-					
+		
 					<div id="pageNav">
 	                   	<ul class="pagination">
-	                       	<!-- <li><a class="chosen" href="#">1</a></li> -->
-	                       	<ui:repeat var="page" value="#{browse.pages}">
+	                       	<li><h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" /></li>
+	                       	<ui:repeat var="page" value="#{browse.lowerPages}">
 								<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
 							</ui:repeat>
-	                       	<li><a href="Catalogue3.html">Next</a></li>
+							<li class="chosen"><h:commandLink class="chosen" value="#{browse.pageNum}" action="#{browse.toPage(page)}" /></li>
+							<ui:repeat var="page" value="#{browse.higherPages}">
+								<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
+							</ui:repeat>
+							<li><h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" /></li>
 	                   	</ul>
-		            </div>
+		            </div>				
 						
-					
                 </h:form>
                 
             </div>

@@ -24,9 +24,13 @@
                     <h4>Products per page</h4>
                     <ul id="numPerList">
                         <h:commandLink class="selected" action="#{browse.setNumPerPage(12)}"><li>12</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(24)}"><li>24</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(36)}"><li>36</li></h:commandLink>
-                        <h:commandLink action="#{browse.setNumPerPage(48)}"><li>48</li></h:commandLink>
+                       	<ui:repeat var="option" value="#{browse.lowerOptions}">
+							<li><h:commandLink value="#{option}" action="#{browse.setNumPerPage(option)}" /></li>
+						</ui:repeat>
+						<li class="selected"><h:commandLink class="selected" value="#{browse.numPerPage}" action="#{browse.setNumPerPage(option)}" /></li>
+						<ui:repeat var="option" value="#{browse.higherOptions}">
+							<li><h:commandLink value="#{option}" action="#{browse.setNumPerPage(option)}" /></li>
+						</ui:repeat>
                     </ul>
                     <br></br><br></br>             
                 </h:form>
@@ -42,7 +46,7 @@
 									<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
 										<img id="productImage" src="Images/Zombies.jpg" />
 										<h4>#{item.name}</h4>	
-										<p><h:outputText value="#{item.description}" /></p>
+										<p>#{browse.getItemDescription(item.description)}</p>
 									</div>
 								</h:commandLink>
 							</div>
@@ -50,53 +54,36 @@
 					</div>
 					
 					<h:panelGroup class="center" rendered="#{browse.products.rowCount > 0}">
-						<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" />
-						<h:outputText value=" #{browse.pagination.pageFirstItem + 1}..#{browse.pagination.pageLastItem + 1}/#{browse.pagination.itemsCount} " />
-						<h:outputText value=" Number of pages = #{browse.pagination.numOfPages} " />
-						<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" />	
-						
-						<div class="w3-row-padding w3-center">
-							<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-								<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" />
-							</div>
-							<ui:repeat var="page" value="#{browse.pages}">
-									<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-										<h4><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></h4>
-									</div>
-							</ui:repeat>
-							<div id="productCard" class="w3-card-2 w3-padding-top productCard hvr-grow">
-								<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" />
-							</div>
-						</div>	
+							
 										
 						<div id="pageNav">
 		                   	<ul class="pagination">
-		                       	<!-- <li><a class="chosen" href="#">1</a></li> -->
-		                       	<ui:repeat var="page" value="#{browse.pages}">
+		                       	<li><h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" /></li>
+		                       	<ui:repeat var="page" value="#{browse.lowerPages}">
 									<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
-									
-									<!--
-									<c:choose>
-									    <c:when test="#{some.test}">
-									        <p>some.test is true</p>
-									    </c:when>
-									    <c:otherwise>
-									        <p>some.test is not true</p>
-									    </c:otherwise>
-									</c:choose> 
-									 -->
-									
 								</ui:repeat>
-		                       	<li><a href="Catalogue3.html">Next</a></li>
+								<li class="chosen"><h:commandLink class="chosen" value="#{browse.pageNum}" action="#{browse.toPage(page)}" /></li>
+								<ui:repeat var="page" value="#{browse.higherPages}">
+									<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
+								</ui:repeat>
+								<li><h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" /></li>
 		                   	</ul>
 			            </div>				
 						
 					</h:panelGroup>
+					
+					<!--
+					<c:choose>
+					    <c:when test="#{some.test}">
+					        <p>some.test is true</p>
+					    </c:when>
+					    <c:otherwise>
+					        <p>some.test is not true</p>
+					    </c:otherwise>
+					</c:choose>  
+					 -->
 						
 				</div>
-				
-				<h:commandButton action="#{ProductGroup.createDataModel()}" value="Hit me!" />
-				
 			</h:form>
 		</div>
 		

@@ -97,6 +97,18 @@ header {
     color: rgba(111, 212, 62, 1);
 }
 
+#cartIcon {
+    text-align: right;
+    position: relative;
+    top: 100px;
+    float: right;
+    margin-right: 25px;
+    cursor: pointer;
+    display: inline;
+    color: white;
+    transition: color 200ms linear;
+}
+
 #loginSignUp {
     text-align: right;
     position: relative;

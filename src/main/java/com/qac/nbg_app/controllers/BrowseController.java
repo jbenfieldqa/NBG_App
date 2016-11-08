@@ -22,18 +22,60 @@ public class BrowseController implements Serializable{
 	private DataModel<Product> products = null;
 	private Pagination pagination;
 	private List<Integer> pages = new ArrayList<Integer>();
+	private List<Integer> lowerPages = new ArrayList<Integer>();
+	private List<Integer> HigherPages = new ArrayList<Integer>();
+	private List<Integer> options = new ArrayList<Integer>();
+	private List<Integer> lowerOptions = new ArrayList<Integer>();
+	private List<Integer> higheroptions = new ArrayList<Integer>();
 	private int numPerPage = 12;
 	private int pageNum = 1;
+	
+	public void setOptions(){
+		options.add(12);
+		options.add(24);
+		options.add(36);
+		options.add(48);
+	}
+	
+	public List<Integer> getLowerOptions(){
+		lowerOptions.clear();
+		if (options.isEmpty()){
+			setOptions();
+		}
+		for	(Integer i : options){
+			if (i < numPerPage){
+				lowerOptions.add(i);
+			}
+		}
+		return lowerOptions;
+	}
+	
+	public List<Integer> getHigherOptions(){
+		higheroptions.clear();
+		if (options.isEmpty()){
+			setOptions();
+		}
+		for	(Integer i : options){
+			if (i > numPerPage){
+				higheroptions.add(i);
+			}
+		}
+		return higheroptions;
+	}
 	
 	public String next() {
 		getPagination().nextPage();
 		recreateModel();
+		pages.clear();
+		pageNum++;
 		return "CatCatalogue";
 	}
 	
 	public String previous() {
 		getPagination().previousPage();
 		recreateModel();
+		pages.clear();
+		pageNum--;
 		return "CatCatalogue";	
 	}
 	
@@ -52,6 +94,8 @@ public class BrowseController implements Serializable{
 				recreateModel();
 			}
 		}
+		pageNum = toPage + 1;
+		pages.clear();
 		return "CatCatalogue";
 	}
 	
@@ -68,11 +112,53 @@ public class BrowseController implements Serializable{
 	
 	public List<Integer> getPages(){
 		if (pages.isEmpty()){
-			for	(int i = 0; i < getPagination().getNumOfPages(); i++){
-				pages.add(i + 1);
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
 			}
 		}
 		return pages;
+	}
+	
+	public List<Integer> getLowerPages(){
+		if (pages.isEmpty()){
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
+			}
+		}
+		return lowerPages;
+	}
+	
+	public List<Integer> getHigherPages(){
+		if (pages.isEmpty()){
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
+			}
+		}
+		return HigherPages;
 	}
 
 	public Pagination getPagination() {
@@ -109,11 +195,21 @@ public class BrowseController implements Serializable{
 		return pagination;
 	}	
 	
+	public int getNumPerPage(){
+		return numPerPage;
+	}
+	
 	public String setNumPerPage(int num){
 		numPerPage = num;
+		pageNum = 1;
 		pagination = null;
+		pages.clear();
 		recreateModel();
 		return "CatCatalogue";
+	}
+	
+	public int getPageNum(){
+		return pageNum;
 	}
 	
 	public void toNumPage(){
@@ -122,4 +218,15 @@ public class BrowseController implements Serializable{
 		System.out.println("- - - - - - -");
 		System.out.println(pageNum);
 	}
+	
+	public String getItemDescription(String str){
+		String shorter = str;
+		if (str.length() > 35){
+			shorter = str.substring(0, 32);
+			shorter += "...";
+		}
+		return shorter;
+	}
+	
+	
 }
