@@ -47,9 +47,18 @@ public class InitialData {
 
 	//------------------------------------ Basket Data -------------------------------------------------
 	private void setupBasketData() {
-		baskets.add(new Basket(1, new ArrayList<Integer>(1), "yesterday"));
-		baskets.add(new Basket(2, new ArrayList<Integer>(2), "yesterday"));
-		baskets.add(new Basket(3, new ArrayList<Integer>(3), "yesterday"));
+		ArrayList<Integer> basketItems = new ArrayList<Integer>();
+		basketItems.add(1);
+		basketItems.add(2);
+		basketItems.add(3);
+		basketItems.add(4);
+		basketItems.add(5);
+		basketItems.add(6);
+		basketItems.add(7);
+		basketItems.add(8);
+		baskets.add(new Basket(1, basketItems, "yesterday"));
+		baskets.add(new Basket(2, basketItems, "yesterday"));
+		baskets.add(new Basket(3, basketItems, "yesterday"));
 	}
 	
 	public void addBasket(Basket b) {
@@ -68,7 +77,7 @@ public class InitialData {
 	private void setupCustomerdata() {
 		customers.add(new Customer("John", "Smith", "IMissSelasi@Devastated.com",
 				"07562942456", "4567188924056659"));
-		customers.add(new Customer("Selasi", "Gbormittah", "SelasiIsAwesome@GBBIsAFix.com",
+		customers.add(new Customer("Selasi", "Gbormittah", "SelasiIsAwesome@GBBOIsAFix.com",
 				"07182942456", "4567145894055421"));
 		customers.add(new Customer("Rav", "Bansal", "RavishingRav99@TastyFlavours.co.uk",
 				"07752942456", "4567178954050231"));

@@ -37,5 +37,11 @@ public class BasketOffline implements BasketManager{
 		initialData.setBaskets(bs);
 	}
 
+	@Override
+	public List<Basket> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }
