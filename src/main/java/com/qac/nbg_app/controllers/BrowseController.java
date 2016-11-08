@@ -221,8 +221,8 @@ public class BrowseController implements Serializable{
 	
 	public String getItemDescription(String str){
 		String shorter = str;
-		if (str.length() > 40){
-			shorter = str.substring(0, 40);
+		if (str.length() > 35){
+			shorter = str.substring(0, 32);
 			shorter += "...";
 		}
 		return shorter;
