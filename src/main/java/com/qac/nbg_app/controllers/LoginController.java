@@ -20,12 +20,12 @@ public class LoginController {
 	
 	public String login() {
 		if (email.equals("")){
-			error = "please enter an email address";
+			error = "Please enter an email address";
 			password = "";
 			return "CatLogin";
 		}
 		if (password.equals("")){
-			error = "please enter a password";
+			error = "Please enter a password";
 			password = "";
 			return "CatLogin";
 		}

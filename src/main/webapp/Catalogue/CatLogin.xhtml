@@ -16,15 +16,19 @@
                     <div class="w3-card-2 loginCard">
                         <h:form id="login-form">
                             <h2>Login</h2>
-                            <br></br>
+                            <br />
                             <h4>Email</h4>
-                            <h:inputText id="login-email" class="input form-control" value="#{login.email}" type="email" required="true" requiredMessage="Enter Email" />
+                            <h:inputText id="login-email" class="input form-control" value="#{login.email}" type="email" required="true" requiredMessage="Please Enter Email" />
+                            <h:message for="login-email" class="login-error" />
                             <h4>Password</h4>
-                            <h:inputSecret id="login-pass" class="input password form-control" value="#{login.password}" type="password" required="true" requiredMessage="Enter Password" />
-                            <br></br>
-                            <br></br>
+                            <h:inputSecret id="login-pass" class="input password form-control" value="#{login.password}" type="password" required="true" requiredMessage="Please Enter Password" />
+                            <h:message for="login-pass" class="login-error"/>
+                            <h:outputText class="login-error" value="#{login.error}" />                         
+                            <br />
+                            <br />
                             <h:commandButton id="loginBtn" class="btn btn-success submit" type="submit" action="#{login.login()}" value="Login" />
                         </h:form>
+						
                     </div>
                 </div>
                 

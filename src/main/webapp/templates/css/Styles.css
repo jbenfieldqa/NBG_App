@@ -97,18 +97,6 @@ header {
     color: rgba(111, 212, 62, 1);
 }
 
-#cartIcon {
-    text-align: right;
-    position: relative;
-    top: 100px;
-    float: right;
-    margin-right: 25px;
-    cursor: pointer;
-    display: inline;
-    color: white;
-    transition: color 200ms linear;
-}
-
 #loginSignUp {
     text-align: right;
     position: relative;
@@ -461,6 +449,10 @@ ul.pagination li a.chosen {
     width: 30%;
 }
 
+.login-error {
+	color: rgb(100,75,50);
+}
+
 /*-------------------------Basket Page-------------------------*/
 
 .basketCard {
@@ -531,3 +523,4 @@ ul.pagination li a.chosen {
 #details-card p {
 	text-align: left;
 }
+
