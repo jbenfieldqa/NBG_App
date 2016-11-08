@@ -6,8 +6,6 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.inject.Named;
-
 import com.qac.nbg_app.entities.*;
 
 import com.qac.nbg_app.enums.CustomerOrderStatus;
@@ -19,7 +17,7 @@ public class InitialData {
 	private List<Basket> baskets =  new ArrayList<Basket>();
 	private List<Customer> customers = new ArrayList<Customer>();
 	private List<CustomerOrder> customerOrders =  new ArrayList<CustomerOrder>();
-	private List<EmployeeInventoryManager> inventoryManagers =  new ArrayList<EmployeeInventoryManager>();
+	private List<Employee> employees =  new ArrayList<Employee>();
 	private List<ProductGroup> productGroups =  new ArrayList<ProductGroup>();
 	private List<ProductItem> productItems =  new ArrayList<ProductItem>();
 	private List<PurchaseOrder> purchaseOrders = new ArrayList<PurchaseOrder>();
@@ -34,7 +32,7 @@ public class InitialData {
 		setupBasketData();
 		setupCustomerdata();
 		setupCustomerOrderData();
-		setupInventoryManagerData();
+		setupEmployeeData();
 		setupProductGroupData();
 		setupProductItemData();
 		setupPurchaseOrderData();
@@ -107,27 +105,27 @@ public class InitialData {
 	}
 
 	//------------------------------------ Inventory Manager Data -------------------------------------------------
-	private void setupInventoryManagerData() {
-		inventoryManagers.add(new EmployeeInventoryManager("Big Boss Man", "John", "Smith",
+	private void setupEmployeeData() {
+		employees.add(new Employee("Big Boss Man", "John", "Smith",
 				"JohnSmith", "johnsmithisdabest12345"));
-		inventoryManagers.add(new EmployeeInventoryManager("Big Boss Woman", "Jane", "Smith",
+		employees.add(new Employee("Big Boss Woman", "Jane", "Smith",
 				"JaneSmith", "janesmithisdabest12345"));
-		inventoryManagers.add(new EmployeeInventoryManager("Small Boss Person", "Alex", "Smith",
+		employees.add(new Employee("Small Boss Person", "Alex", "Smith",
 				"ASmith", "alexsmithisdabest12345"));
 	}
 	
-	public void addEmployeeInventoryManager(EmployeeInventoryManager im) {
-		inventoryManagers.add(im);
+	public void addEmployeeInventoryManager(Employee im) {
+		employees.add(im);
 		
 	}
 
-	public List<EmployeeInventoryManager> getInventoryManagers() {
-		return inventoryManagers;
+	public List<Employee> getEmployees() {
+		return employees;
 	}
 
 	public void setInventoryManagers(
-			List<EmployeeInventoryManager> inventoryManagers) {
-		this.inventoryManagers = inventoryManagers;
+			List<Employee> inventoryManagers) {
+		this.employees = inventoryManagers;
 	}
 	
 	//------------------------------------ Product Group Data -------------------------------------------------

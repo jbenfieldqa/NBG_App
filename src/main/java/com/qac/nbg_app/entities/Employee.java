@@ -9,13 +9,13 @@ import javax.validation.constraints.*;
 
 //Named Queries
 @NamedQueries ({
-@NamedQuery (name=EmployeeInventoryManager.FIND_BY_FIRST_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.firstName = :firstName"),
-@NamedQuery (name=EmployeeInventoryManager.FIND_BY_LAST_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.lastName = :lastName"),
-@NamedQuery (name=EmployeeInventoryManager.FIND_BY_ID, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.employeeInventoryManagerId = :employeeInventoryManagerId"),
-@NamedQuery (name=EmployeeInventoryManager.FIND_BY_USER_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.userName = :userName"),
+@NamedQuery (name=Employee.FIND_BY_FIRST_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.firstName = :firstName"),
+@NamedQuery (name=Employee.FIND_BY_LAST_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.lastName = :lastName"),
+@NamedQuery (name=Employee.FIND_BY_ID, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.employeeInventoryManagerId = :employeeInventoryManagerId"),
+@NamedQuery (name=Employee.FIND_BY_USER_NAME, query = "SELECT a FROM EmployeeInventoryManager a WHERE a.userName = :userName"),
 })
 
-public class EmployeeInventoryManager {
+public class Employee {
 //Query Declarations
 public static final String FIND_BY_FIRST_NAME = "EmployeeInventoryManager.findByEmployeeInventoryManager";
 public static final String FIND_BY_LAST_NAME = "EmployeeInventoryManager.findByEmployeeInventoryManager";
@@ -47,7 +47,7 @@ private String userName;
 @Size (min = 2, max = 225)
 private String password;
 //Constructor
-public EmployeeInventoryManager(String title, String firstName,String lastName, String userName, String password) {
+public Employee(String title, String firstName,String lastName, String userName, String password) {
 this.title = title;
 this.firstName = firstName;
 this.lastName = lastName;
