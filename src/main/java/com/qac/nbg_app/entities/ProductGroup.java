@@ -52,8 +52,7 @@ public class ProductGroup {
 	@Size (min =2, max=225)
 	private int maxThreshold;
 
-	public ProductGroup(int productGroupId, String productName, int supplierOrderId, int productPrice, int productCost, int amountOfProduct, int minThreshold, int maxThreashold){
-		this.productGroupId = productGroupId;
+	public ProductGroup( String productName, int supplierOrderId, int productPrice, int productCost, int amountOfProduct, int minThreshold, int maxThreashold){
 		this.productName = productName;	
 		this.supplierOrderId = supplierOrderId;
 		this.productPrice = productPrice;
@@ -61,7 +60,6 @@ public class ProductGroup {
 		this.amountOfProduct = amountOfProduct; 
 		this.minThreshold = minThreshold; 
 		this.maxThreshold = maxThreashold; 
-
 	}
 
 	public int getProductGroupId() {

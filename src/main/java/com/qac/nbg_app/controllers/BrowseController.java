@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.qac.nbg_app.entities.Product;
+import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.services.BrowseService;
 import com.qac.nbg_app.util.Pagination;
 
@@ -168,9 +169,9 @@ public class BrowseController implements Serializable{
 				@Override
 				public DataModel createDataModel() {
 					try {
-						return new ListDataModel<Product>(browseService.findAll().subList(getPageFirstItem(), getPageFirstItem() + getPageSize()));
+						return new ListDataModel<ProductGroup>(browseService.findAll().subList(getPageFirstItem(), getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
-						return new ListDataModel<Product>(browseService.findAll().subList(getPageFirstItem(), getItemsCount()));
+						return new ListDataModel<ProductGroup>(browseService.findAll().subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
 

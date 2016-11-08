@@ -17,8 +17,7 @@ public abstract class Pagination {
 	abstract public int getNumOfPages();
 	
 	public int getPageFirstItem() {
-		return page 
-				* pageSize;
+		return page * pageSize;
 	}
 	
 	public int getPageSize() {

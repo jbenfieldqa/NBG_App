@@ -132,9 +132,64 @@ public class InitialData {
 	
 	//------------------------------------ Product Group Data -------------------------------------------------
 	private void setupProductGroupData() {
-		productGroups.add(new ProductGroup(1, "Red Gnome", 1, 13000, 25, 45, 5, 50));
-		productGroups.add(new ProductGroup(2, "Blue Gnome", 2, 10000, 250, 55, 5, 50));
-		productGroups.add(new ProductGroup(3, "Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		productGroups.add(new ProductGroup("Blue Gnome", 2, 10000, 250, 55, 5, 50));
+		productGroups.add(new ProductGroup("Green Gnome", 3, 8000, 2500, 35, 5, 50));
+		productGroups.add(new ProductGroup("Red Gnome", 1, 13000, 25, 45, 5, 50));
+		
 	}
 	
 	public void addProductGroup(ProductGroup a) {

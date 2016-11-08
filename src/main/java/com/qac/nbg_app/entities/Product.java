@@ -5,12 +5,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "Product")
+
+@NamedQueries ({
+	@NamedQuery (name="Product.findAllProducts",
+	query = "SELECT a FROM Product a"),
+	@NamedQuery (name="Product.find_by_productId",
+	query = "SELECT b FROM Product b WHERE b.productId = :name"),
+	@NamedQuery (name="Product.find_by_productName",
+	query = "SELECT c FROM Product c WHERE c.productName = :name"),
+})
+
 public class Product {
 	
 	@Id //ID is for PK

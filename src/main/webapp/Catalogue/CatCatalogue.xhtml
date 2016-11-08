@@ -39,7 +39,6 @@
             </div>
             
             <div id="productGrid">
-                
                	<h:form>
                		<h:outputText escape="false" value="No Products Found" rendered="#{browse.products.rowCount == 0}" />
 					<ui:repeat var="item" value="#{browse.products}">
@@ -47,32 +46,33 @@
 							<div id="productCard" class="w3-card-2 w3-padding-top productCard">
 								<img id="productImage" src="Images/Zombies.jpg" />
 								<h4>
-									<h:commandLink action="#{product.itemClick(item)}" value="#{item.name}">
+									<h:commandLink action="#{product.itemClick(item)}" value="#{item.productName}">
 									</h:commandLink>
 								</h4>	
-								<p><h:outputText value="#{browse.getItemDescription(item.description)}" /></p>
+								<p><h:outputText value="#{browse.getItemDescription(item.productPrice)}" /></p>
 								<a class="w3-btn addToBtn" href="CatBasket.xhtml">Add to cart</a> 
 							</div>
 						</div>
-					</ui:repeat>
-		
-					<div id="pageNav">
-	                   	<ul class="pagination">
-	                       	<li><h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" /></li>
-	                       	<ui:repeat var="page" value="#{browse.lowerPages}">
-								<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
-							</ui:repeat>
-							<li class="chosen"><h:commandLink class="chosen" value="#{browse.pageNum}" action="#{browse.toPage(page)}" /></li>
-							<ui:repeat var="page" value="#{browse.higherPages}">
-								<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
-							</ui:repeat>
-							<li><h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" /></li>
-	                   	</ul>
-		            </div>				
-						
-                </h:form>
-                
+					</ui:repeat>		
+                </h:form> 
             </div>
+            <br /><br /><br /><br />
+            <div id="pageNav">
+            	<h:form>
+                   	<ul class="pagination">
+                       	<li><h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.pagination.hasPreviousPage}" /></li>
+                       	<ui:repeat var="page" value="#{browse.lowerPages}">
+							<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
+						</ui:repeat>
+						<li class="chosen"><h:commandLink class="chosen" value="#{browse.pageNum}" action="#{browse.toPage(page)}" /></li>
+						<ui:repeat var="page" value="#{browse.higherPages}">
+							<li><h:commandLink value="#{page}" action="#{browse.toPage(page)}" /></li>
+						</ui:repeat>
+						<li><h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.pagination.hasNextPage}" /></li>
+                   	</ul>
+                </h:form>
+	        </div>
+		    	
         </div>
         
 	</ui:define> 
