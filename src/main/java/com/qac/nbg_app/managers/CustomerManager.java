@@ -14,4 +14,5 @@ public interface CustomerManager {
 	public Customer findByUserPass(String lowerCase, String pass);
 	public String getUserID(String lowerCase);
 	List<Customer> listCustomers();
+	public Customer getUserByEmail(String email);
 }

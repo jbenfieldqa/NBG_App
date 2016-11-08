@@ -12,14 +12,14 @@ public class LoginService {
 	CustomerManager custManager;
 	
 	public boolean validateDetails(String email, String password) {
-		Customer customer = custManager.findByUserPass(email.toLowerCase(), password);
-		if(customer != null)
+		Customer customer = custManager.getUserByEmail(email);
+		if(customer != null && customer.getPassword().equals(password))
 			return true;
 		return false;
 	}
 	
-	public String getUserID(String email) {
-		return custManager.getUserID(email.toLowerCase());
+	public String getUserID(String user) {
+		return custManager.getUserID(user.toLowerCase());
 	}
 	
 

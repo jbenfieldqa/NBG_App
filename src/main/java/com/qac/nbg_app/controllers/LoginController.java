@@ -22,26 +22,26 @@ public class LoginController {
 		if (email.equals("")){
 			error = "please enter an email address";
 			password = "";
-			return "login";
+			return "CatLogin";
 		}
 		if (password.equals("")){
 			error = "please enter a password";
 			password = "";
-			return "login";
+			return "CatLogin";
 		}
 		if (!loginService.validateDetails(email, password)) {
 			error = "Invalid login";
 			password = "";
-			return "login";
+			return "CatLogin";
 		}
 		userCredentials.setEmail(
 				loginService.getUserID(email));
-		return "browse";
+		return "CatHome";
 	}
 	
 	public String logout() {
-		userCredentials.setEmail("");
-		return "home";
+		userCredentials.setEmail(null);
+		return "CatHome";
 	}
 
 	public String getEmail() {

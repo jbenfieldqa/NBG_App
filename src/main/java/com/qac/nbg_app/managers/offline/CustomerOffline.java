@@ -81,4 +81,16 @@ public class CustomerOffline implements CustomerManager {
 		return null;
 	}
 
+	@Override
+	public Customer getUserByEmail(String email) {
+		List<Customer> us = initialData.getCustomers();
+		for(int i=0; i<us.size(); i++){
+			System.out.println(us.get(i).getEmail());
+			if(us.get(i).getEmail().equals(email)){
+				return us.get(i); 
+			}
+		}
+		return null; 
+	}
+
 }
