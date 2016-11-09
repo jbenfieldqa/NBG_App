@@ -1,6 +1,8 @@
 package com.qac.nbg_app.controllers;
 
-import javax.enterprise.context.RequestScoped;
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -8,8 +10,8 @@ import com.qac.nbg_app.services.LoginService;
 import com.qac.nbg_app.util.UserCredentials;
 
 @Named(value="login")
-@RequestScoped
-public class LoginController {
+@SessionScoped
+public class LoginController implements Serializable {
 	@Inject
 	private LoginService loginService;
 	@Inject
@@ -17,6 +19,7 @@ public class LoginController {
 	private String email;
 	private String password;
 	private String error;
+	private boolean loggedIn = false;
 	
 	public String login() {
 		if (email.equals("")){
@@ -34,13 +37,14 @@ public class LoginController {
 			password = "";
 			return "CatLogin";
 		}
-		userCredentials.setEmail(
-				loginService.getUserID(email));
+		userCredentials.setEmail(loginService.getUserID(email));
+		setLoggedIn(true);
 		return "CatHome";
 	}
 	
 	public String logout() {
 		userCredentials.setEmail(null);
+		setLoggedIn(false);
 		return "CatHome";
 	}
 
@@ -70,6 +74,14 @@ public class LoginController {
 		else System.out.println("value doesn't exist");
 		return true;
 			
+	}
+
+	public boolean isLoggedIn() {
+		return loggedIn;
+	}
+
+	public void setLoggedIn(boolean loggedIn) {
+		this.loggedIn = loggedIn;
 	}
 	
 

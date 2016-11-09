@@ -98,9 +98,7 @@ header {
 }
 
 #loginSignUp {
-    text-align: right;
     position: relative;
-    top: -10px;
     float: right;
     margin-right: 25px;
     cursor: pointer;
@@ -108,8 +106,14 @@ header {
     color: white;
 }
 
+
 .login {
 	color: white;
+}
+
+.logout {
+	color: white;
+	min-width: 50px;
 }
 
 #closeIcon {
@@ -522,5 +526,9 @@ ul.pagination li a.chosen {
 
 #details-card p {
 	text-align: left;
+}
+
+#no-account-card {
+	background: rgba(111, 212, 62, 0.2);
 }
 

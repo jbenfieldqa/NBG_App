@@ -2,9 +2,9 @@ package com.qac.nbg_app.util;
 
 import java.io.Serializable;
 
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 
-@SessionScoped
+@RequestScoped
 public class UserCredentials implements Serializable {	
 	private String email;
 	
@@ -15,5 +15,5 @@ public class UserCredentials implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	
 }
