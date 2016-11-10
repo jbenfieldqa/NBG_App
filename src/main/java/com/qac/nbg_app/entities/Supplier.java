@@ -1,7 +1,5 @@
 package com.qac.nbg_app.entities;
 
-import java.util.ArrayList;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -27,36 +25,20 @@ public class Supplier {
 	@NotNull
 	private String supplierName;
 	
-	@OneToMany
-	@JoinColumn(name = "productGroupIds", nullable = false)
-	@NotNull
-	private ArrayList<Integer> productGroupIds;
-	
 	public Supplier(String supplierName) {
 		this.supplierName = supplierName;
-		productGroupIds = new ArrayList<Integer>();
 	}
 	
 	public int getSupplierId() {
 		return supplierId;
 	}
+	
 	public String getSupplierName() {
 		return supplierName;
 	}
+	
 	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
-	}
-	public ArrayList<Integer> getProductGroupIds() {
-		return productGroupIds;
-	}
-	public void setpGIds(ArrayList<Integer> productGroupIds) {
-		this.productGroupIds = productGroupIds;
-	}
-	public void addProductGroupId(int productGroupId){
-		productGroupIds.add(productGroupId);
-	}
-	public void removeProductGroupId(int productGroupId){
-		productGroupIds.remove(productGroupId);
 	}
 	
 }

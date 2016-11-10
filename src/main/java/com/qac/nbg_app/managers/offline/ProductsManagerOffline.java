@@ -20,8 +20,8 @@ public class ProductsManagerOffline implements ProductManager{
 	private InitialData initialData;
 	
 	@Override
-	public List<ProductGroup> findAll() {
-		return initialData.getProductGroups();
+	public List<Product> findAll() {
+		return initialData.getProducts();
 	}
 
 	@Override

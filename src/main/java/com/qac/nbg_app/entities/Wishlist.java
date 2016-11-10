@@ -1,7 +1,5 @@
 package com.qac.nbg_app.entities;
 
-import java.util.ArrayList;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -10,58 +8,36 @@ import javax.validation.constraints.NotNull;
 
 //Queries
 @NamedQueries ({
-	@NamedQuery (name= Wishlist.FIND_BY_WISHLIST_ID, query = "SELECT a FROM  Wishlist a WHERE a.wishlistId = :wishlistId"),
+	@NamedQuery (name= Wishlist.FIND_BY_CUSTOMER_ID, query = "SELECT a FROM  Wishlist a WHERE a.customerId = :customerId"),
+	@NamedQuery (name= Wishlist.FIND_BY_PRODUCT_ID, query = "SELECT a FROM  Wishlist a WHERE a.productId = :productId"),
 })
 
 public class Wishlist {
 	
 	//Query Declarations
-	public static final String FIND_BY_WISHLIST_ID = "Wishlist.findByWishlist";
+	public static final String FIND_BY_CUSTOMER_ID = "Wishlist.findByCustomer";
+	public static final String FIND_BY_PRODUCT_ID = "Wishlist.findByProduct";
 	
-	@Id
-	@Column(name = "wishlistId")
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private int wishlistId;
-	
-	@OneToOne
+	@OneToMany
 	@JoinColumn(name = "customerId", nullable = false)
 	@NotNull
 	private int customerId;
 	
 	@OneToMany
-	@JoinColumn(name = "productGroupId", nullable = false)
+	@JoinColumn(name = "productId", nullable = false)
 	@NotNull
-	private ArrayList<Integer> productGroupIds;
+	private int productId;
 	
-	public Wishlist(int customerId, int wishlistId) {
-		// this.wishlistId = setWishlistId(); 
-		this.wishlistId = wishlistId;
+	public Wishlist(int customerId, int productId) {
 		this.customerId = customerId;
-		//this.productGroupIds = ProductGroupIds;
+		this.productId =productId;
 	}
 	
-	//setWId needs to be implemented, currently returns 0
-	// public int setWishlistId(){return 0;} 
-	public void setWishlistId(int wishlistId){
-		this.wishlistId = wishlistId;
-	}
-
-	public int getWishlistId(){
-		return wishlistId;
-	}
 	public int getCustomerId() {
 		return customerId;
 	}
-	public void setWId(int customerId) {
-		this.wishlistId = customerId;
-	}
-	public ArrayList<Integer> getProductGroupIds() {
-		return productGroupIds;
-	}
-	public void addPGId(int productGroupId){
-		productGroupIds.add(productGroupId);
-	}
-	public void removePGId(int productGroupId){
-		productGroupIds.remove(productGroupId);
+	
+	public int getProductId(){
+		return productId;
 	}
 }

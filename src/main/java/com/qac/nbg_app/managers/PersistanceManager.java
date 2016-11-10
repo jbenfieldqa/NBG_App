@@ -12,7 +12,7 @@ public class PersistanceManager {
 	
 	public EntityManager CreateEntityManager(){
 		try {
-			emf = Persistence.createEntityManagerFactory("BookLibraryPU");
+			emf = Persistence.createEntityManagerFactory("DatabasePU");
 			EntityManager em = emf.createEntityManager();
 			return em;
 		} catch (PersistenceException pe){

@@ -17,35 +17,27 @@ public class WishlistOffline implements WishlistManager {
 	
 	@Inject
 	private InitialData initialData;
-
+	
+	@Override
 	public void persistWishlist(Wishlist w) {
 		initialData.addWishlist(w);
-		
 	}
-
+	
+	@Override
 	public void persistWishlists(List<Wishlist> w) {
 		initialData.getWishlists();
 	}
 
-	public Wishlist findWishlistById(int id) {
-		List<Wishlist> ws = initialData.getWishlists();
-		for(Wishlist i: ws) {
-			if(i.getWishlistId() == id) return i;;
-		}
-		
-		return null;
-	}
-
+	@Override
 	public void updateWishlist(Wishlist w) {
 		List<Wishlist> ws = initialData.getWishlists();
 		for(int i=0; i<ws.size(); i++) {
 			if(ws.get(i).equals(w))ws.set(i, w);
 		}
 		initialData.setWishlists(ws);
-		
 	}
 		
-
+	@Override
 	public void removeWishlist(Wishlist w) {
 		List<Wishlist> ws = initialData.getWishlists();
 		for(int i=0; i<ws.size(); i++) {
@@ -55,8 +47,32 @@ public class WishlistOffline implements WishlistManager {
 		
 	}
 
+	@Override
 	public List<Wishlist> listWishList() {
-		return initialData.getWishlists();
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Wishlist findWishlistByCustomerId(int id) {
+		List<Wishlist> ws = initialData.getWishlists();
+		for(Wishlist i: ws) {
+			if(i.getCustomerId() == id){
+				return i;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Wishlist findWishlistByProductId(int id) {
+		List<Wishlist> ws = initialData.getWishlists();
+		for(Wishlist i: ws) {
+			if(i.getProductId() == id){
+				return i;
+			}
+		}
+		return null;
 	}
 
 }

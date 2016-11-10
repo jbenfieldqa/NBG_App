@@ -7,7 +7,7 @@ import com.qac.nbg_app.entities.Product;
 import com.qac.nbg_app.entities.ProductGroup;
 
 public interface ProductManager {
-	public List<ProductGroup> findAll();
+	public List<Product> findAll();
 
 	void persistProduct(Product p);
 

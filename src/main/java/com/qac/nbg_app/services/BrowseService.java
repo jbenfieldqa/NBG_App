@@ -14,7 +14,7 @@ public class BrowseService {
 	@Inject
 	private ProductManager productManager;
 
-	public List<ProductGroup> findAll() {
+	public List<Product> findAll() {
 		return productManager.findAll();
 	}
 }

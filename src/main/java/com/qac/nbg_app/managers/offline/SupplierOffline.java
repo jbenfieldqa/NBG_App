@@ -22,23 +22,17 @@ public class SupplierOffline implements SupplierManager {
 		initialData.addSupplier(s);
 	}
 
-	public  List<Supplier>  listSuppliers() {
-		return initialData.getSuppliers();
-		
-	}
-
 	public Supplier findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public ArrayList<Supplier> getSuppliers() {
-		// TODO Auto-generated method stub
-		return null;
+		return initialData.getSuppliers();
 	}
 
 	public void updateSupplier(Supplier s) {
-		List<Supplier> ss = initialData.getSuppliers();
+		ArrayList<Supplier> ss = initialData.getSuppliers();
 		for(int i=0; i<ss.size(); i++) {
 			if(ss.get(i).equals(s))ss.set(i, s);
 		}
@@ -47,7 +41,7 @@ public class SupplierOffline implements SupplierManager {
 	}
 
 	public void removeSupplier(Supplier s) {
-		List<Supplier> ss = initialData.getSuppliers();
+		ArrayList<Supplier> ss = initialData.getSuppliers();
 		for(int i=0; i<ss.size(); i++) {
 			if(ss.get(i).equals(s))ss.remove(i);
 		}

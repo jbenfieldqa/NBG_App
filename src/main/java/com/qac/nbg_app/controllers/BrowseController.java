@@ -118,9 +118,9 @@ public class BrowseController implements Serializable{
 				@Override
 				public DataModel createDataModel() {
 					try {
-						return new ListDataModel<ProductGroup>(browseService.findAll().subList(getPageFirstItem(), getPageFirstItem() + getPageSize()));
+						return new ListDataModel<Product>(browseService.findAll().subList(getPageFirstItem(), getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
-						return new ListDataModel<ProductGroup>(browseService.findAll().subList(getPageFirstItem(), getItemsCount()));
+						return new ListDataModel<Product>(browseService.findAll().subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
 
