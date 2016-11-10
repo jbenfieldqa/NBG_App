@@ -110,57 +110,6 @@ public class BrowseController implements Serializable{
 		
 		return products;
 	}
-	
-	public List<Integer> getPages(){
-		if (pages.isEmpty()){
-			lowerPages.clear();
-			HigherPages.clear();
-			int pageCount = (getPagination().getNumOfPages() + 1);
-			for	(int i = 1; i < pageCount; i++){
-				pages.add(i);
-				if (i < pageNum){
-					lowerPages.add(i);
-				}else if (i > pageNum){
-					HigherPages.add(i);
-				}
-			}
-		}
-		return pages;
-	}
-	
-	public List<Integer> getLowerPages(){
-		if (pages.isEmpty()){
-			lowerPages.clear();
-			HigherPages.clear();
-			int pageCount = (getPagination().getNumOfPages() + 1);
-			for	(int i = 1; i < pageCount; i++){
-				pages.add(i);
-				if (i < pageNum){
-					lowerPages.add(i);
-				}else if (i > pageNum){
-					HigherPages.add(i);
-				}
-			}
-		}
-		return lowerPages;
-	}
-	
-	public List<Integer> getHigherPages(){
-		if (pages.isEmpty()){
-			lowerPages.clear();
-			HigherPages.clear();
-			int pageCount = (getPagination().getNumOfPages() + 1);
-			for	(int i = 1; i < pageCount; i++){
-				pages.add(i);
-				if (i < pageNum){
-					lowerPages.add(i);
-				}else if (i > pageNum){
-					HigherPages.add(i);
-				}
-			}
-		}
-		return HigherPages;
-	}
 
 	public Pagination getPagination() {
 		if(pagination==null)
@@ -229,5 +178,55 @@ public class BrowseController implements Serializable{
 		return shorter;
 	}
 	
+	public List<Integer> getPages(){
+		if (pages.isEmpty()){
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
+			}
+		}
+		return pages;
+	}
+	
+	public List<Integer> getLowerPages(){
+		if (pages.isEmpty()){
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
+			}
+		}
+		return lowerPages;
+	}
+	
+	public List<Integer> getHigherPages(){
+		if (pages.isEmpty()){
+			lowerPages.clear();
+			HigherPages.clear();
+			int pageCount = (getPagination().getNumOfPages() + 1);
+			for	(int i = 1; i < pageCount; i++){
+				pages.add(i);
+				if (i < pageNum){
+					lowerPages.add(i);
+				}else if (i > pageNum){
+					HigherPages.add(i);
+				}
+			}
+		}
+		return HigherPages;
+	}
 	
 }
