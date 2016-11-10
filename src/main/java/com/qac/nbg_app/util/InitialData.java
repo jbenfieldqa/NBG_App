@@ -24,7 +24,6 @@ public class InitialData {
 	private List<Stock> stockList =  new ArrayList<Stock>();
 	private List<Wishlist> wishlists =  new ArrayList<Wishlist>();
 	private ArrayList<Supplier> suppliers =  new ArrayList<Supplier>();
-	
 	private List<Product> products = new ArrayList<Product>();
 	
 	@PostConstruct

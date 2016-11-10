@@ -8,12 +8,10 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Product;
-import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.managers.ProductManager;
 import com.qac.nbg_app.util.InitialData;
 
 @Stateless
-@Default
 public class ProductsManagerOffline implements ProductManager{
 
 	@Inject

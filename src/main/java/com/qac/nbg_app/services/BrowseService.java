@@ -6,7 +6,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import com.qac.nbg_app.entities.Product;
-import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.managers.ProductManager;
 
 @Stateless

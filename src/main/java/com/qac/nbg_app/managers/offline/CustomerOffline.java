@@ -16,8 +16,6 @@ import com.qac.nbg_app.managers.CustomerManager;
 import com.qac.nbg_app.util.InitialData;
 
 
-@Alternative
-@Default
 @Stateless
 @SessionScoped
 public class CustomerOffline implements CustomerManager {
