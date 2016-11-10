@@ -10,9 +10,11 @@ import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.managers.ProductGroupManager;
 import com.qac.nbg_app.util.InitialData;
 
+
 @Stateless
 @Default
 public class ProductGroupOffline implements ProductGroupManager{
+
 	@Inject
 	private InitialData initialData;
 	

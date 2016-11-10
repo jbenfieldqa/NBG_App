@@ -9,8 +9,17 @@
 	<ui:define name="maincontent">
 		
 		<div class="w3-container">
+			<h:panelGroup rendered="#{!login.isLoggedIn()}">
+				<div class="w3-row-padding w3-center w3-margin-top">
+					<div id="no-account-card" class="w3-card-2">
+						<p>You are not logged in</p>
+					</div>
+				</div>
+			</h:panelGroup>
+			<h:panelGroup rendered="#{login.isLoggedIn()}">
 			<div class="w3-row-padding w3-center w3-margin-top">
 				<div class="w3-half">
+				
 					<div id="name-card" class="w3-card-2">
 						<h2>John Smith</h2>
 					</div>
@@ -30,7 +39,7 @@
 					<div id="details-card" class="w3-card-2">
 						<h3>Account Details</h3>
 						<h4>Contact and Delivery</h4>
-						<p>Email Address: johnsmithlovesgnomes@gmail.com</p>
+						<p>Email Address: #{login.email}</p>
 						<p>
 							Delivery Address:<br />
 							123 Gnomison Drive<br />
@@ -52,6 +61,7 @@
 					</div>
 				</div>
 			</div>
+			</h:panelGroup>
 		</div>
 		
 	</ui:define> 

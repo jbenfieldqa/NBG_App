@@ -1,0 +1,61 @@
+<ui:composition 
+	xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="templates/CatTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="NB Gardens">Login</ui:define>
+	<ui:define name="maincontent">
+
+		<!--Page content -->
+		<div class="w3-container">
+            
+            <div class="w3-row-padding">
+                <div class="w3-col l6">
+                    <div class="w3-card-2 loginCard">
+                        <h:form>
+                            <h2>Login</h2>
+                            <br></br>
+                            <h4>Email</h4>
+                            <h:inputText class="input form-control" value="#{login.email}" type="email" required="true" requiredMessage="Enter Email" />
+                            <h4>Password</h4>
+                            <h:inputSecret class="input password form-control" value="#{login.password}" type="password" required="true" requiredMessage="Enter Password" />
+                            <br></br>
+                            <br></br>
+                            <h:commandButton id="loginBtn" class="btn btn-success submit" type="submit" action="#{login.login()}" value="Login" />
+                        </h:form>
+                    </div>
+                </div>
+                
+                <div class=" w3-col l6">
+                    <div class="w3-card-2 loginCard">
+                        <form action="CatRegister.xhtml">
+                            <div class="password">
+                                <h2>Register</h2>
+                                <span class="tooltip">Tooltip text</span>
+                            </div>
+                            <br></br>
+                            <h4>First name</h4>
+                            <input class="input" type="text" name="firstName" />
+                            <h4>Last name</h4>
+                            <input class="input" type="text" name="lastName" />
+                            <h4>Email</h4>
+                            <input class="input" type="email" name="registerEmail" />
+                            <h4>Password</h4>
+                            <input class="input password" type="password" name="registerPassword" />
+                            <p>Passwords must be at least 9 characters long</p>
+                            <h4>Re-type password</h4>
+                            <input class="input password" type="password" name="checkPassword" />
+                            <br></br>
+                            <br></br>
+                            <input class="btn btn-success submit" type="submit" value="Begin registration" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+	  		
+	</ui:define> 
+</ui:composition>

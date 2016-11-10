@@ -9,6 +9,7 @@ import com.qac.nbg_app.entities.ProductItem;
 import com.qac.nbg_app.managers.ProdItemInterface;
 import com.qac.nbg_app.util.InitialData;
 
+
 @Stateless
 @Default
 public class ProductItemOffline implements ProdItemInterface {

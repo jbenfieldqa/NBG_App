@@ -11,6 +11,7 @@ import com.qac.nbg_app.entities.Supplier;
 import com.qac.nbg_app.managers.SupplierManager;
 import com.qac.nbg_app.util.InitialData;
 
+
 @Stateless
 @Default
 public class SupplierOffline implements SupplierManager {

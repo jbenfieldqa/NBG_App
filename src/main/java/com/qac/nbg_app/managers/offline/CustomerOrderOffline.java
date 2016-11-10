@@ -11,6 +11,8 @@ import com.qac.nbg_app.entities.CustomerOrder;
 import com.qac.nbg_app.managers.CustomerOrderManager;
 import com.qac.nbg_app.util.InitialData;
 
+
+
 @Stateless
 @Default
 public abstract class CustomerOrderOffline implements CustomerOrderManager{

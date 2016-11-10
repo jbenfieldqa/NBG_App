@@ -449,6 +449,10 @@ ul.pagination li a.chosen {
     width: 30%;
 }
 
+.login-error {
+	color: rgb(100,75,50);
+}
+
 /*-------------------------Basket Page-------------------------*/
 
 .basketCard {
@@ -519,3 +523,4 @@ ul.pagination li a.chosen {
 #details-card p {
 	text-align: left;
 }
+

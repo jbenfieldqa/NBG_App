@@ -50,6 +50,11 @@ public class Customer {
 	@Size (min = 2, max = 225)
 	private String email;
 	
+	@Column(name="pasword", nullable = false, length = 225)
+	@NotNull
+	@Size (min = 9, max = 225)
+	private String password;
+	
 	@Column(name = "phoneNum", nullable = false, length = 225)
 	@NotNull
 	@Size (min = 2, max = 225)
@@ -75,10 +80,11 @@ public class Customer {
 	@NotNull
 	private ArrayList<Integer> previousOrdersIds;
 	
- 	public Customer(String firstName, String lastName, String email, String phoneNum, String cardNum) {
+ 	public Customer(String firstName, String lastName, String email, String password, String phoneNum, String cardNum) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.password = password;
 		this.phoneNum = phoneNum;
 		this.cardNum = cardNum;
 		this.wishlistId = 0;
@@ -108,6 +114,17 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
 	public String getPhoneNum() {
 		return phoneNum;
 	}

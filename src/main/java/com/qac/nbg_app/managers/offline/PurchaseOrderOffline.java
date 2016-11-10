@@ -11,6 +11,7 @@ import com.qac.nbg_app.entities.PurchaseOrder;
 import com.qac.nbg_app.managers.PurchaseOrderManager;
 import com.qac.nbg_app.util.InitialData;
 
+
 @Stateless
 @Default
 public class PurchaseOrderOffline implements PurchaseOrderManager{
