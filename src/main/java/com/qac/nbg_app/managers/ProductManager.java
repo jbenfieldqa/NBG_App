@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.qac.nbg_app.entities.Product;
-import com.qac.nbg_app.entities.ProductGroup;
 
 public interface ProductManager {
 	public List<Product> findAll();

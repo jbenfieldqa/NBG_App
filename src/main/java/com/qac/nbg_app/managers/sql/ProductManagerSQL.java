@@ -3,6 +3,8 @@ package com.qac.nbg_app.managers.sql;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -14,6 +16,8 @@ import com.qac.nbg_app.entities.ProductGroup;
 import com.qac.nbg_app.managers.PersistanceManager;
 import com.qac.nbg_app.managers.ProductManager;
 
+@Stateless
+@Alternative
 public class ProductManagerSQL implements ProductManager {
 	@Inject
 	private PersistanceManager pm;

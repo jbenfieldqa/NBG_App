@@ -46,10 +46,10 @@
 							<div id="productCard" class="w3-card-2 w3-padding-top productCard">
 								<img id="productImage" src="Images/Zombies.jpg" />
 								<h4>
-									<h:commandLink action="#{product.itemClick(item)}" value="#{item.productName}">
+									<h:commandLink action="#{product.itemClick(item)}" value="#{item.name}">
 									</h:commandLink>
 								</h4>	
-								<p><h:outputText value="#{browse.getItemDescription(item.productPrice)}" /></p>
+								<p><h:outputText value="#{item.description}" /></p>
 								<a class="w3-btn addToBtn" href="CatBasket.xhtml">Add to cart</a> 
 							</div>
 						</div>

@@ -229,4 +229,8 @@ public class BrowseController implements Serializable{
 		return HigherPages;
 	}
 	
+	public String toString(Product p){
+		return p.toString();
+	}
+	
 }

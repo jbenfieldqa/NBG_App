@@ -25,10 +25,10 @@ public class InitialData {
 	private List<Wishlist> wishlists =  new ArrayList<Wishlist>();
 	private ArrayList<Supplier> suppliers =  new ArrayList<Supplier>();
 	private List<Product> products = new ArrayList<Product>();
+	private List<OrderLine> orderLines = new ArrayList<OrderLine>();
 	
 	@PostConstruct
 	public void setupData() {
-		setupBasketData();
 		setupCustomerdata();
 		setupCustomerOrderData();
 		setupEmployeeData();
@@ -39,35 +39,25 @@ public class InitialData {
 		setupSupplierData();
 		setupWishlistData();
 		
+		setupOrderLineData();
 		setupProductData();
 	}
 
-	//------------------------------------ Basket Data -------------------------------------------------
-	private void setupBasketData() {
-		ArrayList<Integer> basketItems = new ArrayList<Integer>();
-		basketItems.add(1);
-		basketItems.add(2);
-		basketItems.add(3);
-		basketItems.add(4);
-		basketItems.add(5);
-		basketItems.add(6);
-		basketItems.add(7);
-		basketItems.add(8);
-		baskets.add(new Basket(1, basketItems, "yesterday"));
-		baskets.add(new Basket(2, basketItems, "yesterday"));
-		baskets.add(new Basket(3, basketItems, "yesterday"));
+	//------------------------------------ OrderLine Data -------------------------------------------------
+	private void setupOrderLineData() {
+		
 	}
 	
-	public void addBasket(Basket b) {
-		baskets.add(b);		
+	public void addOrderLine(OrderLine o) {
+		orderLines.add(o);		
 	}
 
-	public List<Basket> getBaskets() {
-		return baskets;
+	public List<OrderLine> getOrderLines() {
+		return orderLines;
 	}
 
-	public void setBaskets(List<Basket> b) {
-		this.baskets = b;
+	public void setOrderLines(List<OrderLine> o) {
+		this.orderLines = o;
 	}
 	
 	//------------------------------------ Customer Data -------------------------------------------------
@@ -94,9 +84,8 @@ public class InitialData {
 
 	//------------------------------------ Customer Order Data -------------------------------------------------
 	private void setupCustomerOrderData() {
-		customerOrders.add(new CustomerOrder(1, new ArrayList<Integer>(1), "This is an address honest gov",
-				"This is another address seriously honest gov", "John Smith", "JohnSmiths@Emial.com", 
-				"01202558963", "1234567891234567", "20/10/16", "null", CustomerOrderStatus.processing));
+		customerOrders.add(new CustomerOrder(1, "John Smith Sr",
+				CustomerOrderStatus.processing));
 	}
 	
 	public void addCustomerOrder(CustomerOrder co) {

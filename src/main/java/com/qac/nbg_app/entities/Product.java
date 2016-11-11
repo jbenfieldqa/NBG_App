@@ -85,7 +85,7 @@ public class Product {
 	
 	@Override
 	public String toString(){
-		String out = name + "\n" + description + "\n" + id;
+		String out = name + "\n" + description + "\n" + id + "\n" + price;
 		return out;
 	}
 

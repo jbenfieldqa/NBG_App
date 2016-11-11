@@ -1,9 +1,6 @@
 package com.qac.nbg_app.entities;
 
 //Imports
-import java.util.*;
-
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -57,19 +54,33 @@ public class CustomerOrder {
 	@NotNull
 	private int customerId;
 	
+	@ManyToOne
+	@JoinColumn(name = "billingDetailsId_fk", nullable = false)
+	@NotNull
 	private int billingDetailsId;
 	
+	@ManyToOne
+	@JoinColumn(name = "deliveryAddressId_fk", nullable = false)
+	@NotNull
 	private int deliveryAddressId;
 	
 	
 	//Constructor
+	public CustomerOrder(int customerId, String customerName, CustomerOrderStatus status){
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.orderStatus = status;
+	}
+	
 	public CustomerOrder(int customerId, String customerName, String datePlaced, 
-			String dateShipped, CustomerOrderStatus status){
+			String dateShipped, CustomerOrderStatus status, int billingDetailsId, int deliveryAddressId){
 		this.customerId = customerId;
 		this.customerName = customerName;
 		this.datePlaced = datePlaced;
 		this.dateShipped = dateShipped;
 		this.orderStatus = status;
+		this.billingDetailsId = billingDetailsId;
+		this.deliveryAddressId = deliveryAddressId;
 	}
 	
 	//Getters and Setters
